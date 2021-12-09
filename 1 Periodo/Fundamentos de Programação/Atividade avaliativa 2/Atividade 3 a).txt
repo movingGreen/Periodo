@@ -1,0 +1,19 @@
+programa {
+	funcao inicio() {
+		inteiro num, resto
+		
+		escreva("Digite um número inteiro: ")
+		leia(num)
+		
+		resto = num % 2
+		
+		se(resto == 0)
+		{
+		    escreva("O número é par")
+		}
+		senao
+		{
+		    escreva("O número é impar")
+		}
+	}
+}
