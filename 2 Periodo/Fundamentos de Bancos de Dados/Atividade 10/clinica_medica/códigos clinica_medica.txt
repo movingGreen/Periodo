@@ -1,0 +1,38 @@
+UPDATE paciente
+SET endereco = 'Rua x, Bairro abc1 Cuiabá'
+WHERE id_paciente = 2
+
+============================
+
+UPDATE medico
+SET especialidade = 'NEUROLOGIA, PSICOLOGIA'
+WHERE nome = 'Lina Nathália'
+
+============================
+
+DELETE FROM consulta WHERE dt_consulta = '2018-06-25'
+
+============================
+
+DELETE FROM consulta WHERE id_consulta = 9
+
+=============================
+
+SELECT nome, sexo, id_consulta, prescricao
+FROM medico, consulta
+WHERE medico.id_medico = consulta.id_medico
+ORDER BY 1,2
+
+=============================
+
+SELECT nome, cpf, dt_consulta, id_consulta
+FROM paciente, consulta
+WHERE paciente.id_paciente = consulta.id_paciente 
+ORDER BY 1,2
+
+============================
+
+SELECT nu_crm, especialidade, exames_solicitados, cpf, paciente.endereco AS "endereco do paciente", dt_nascimento
+FROM medico, paciente, consulta
+WHERE consulta.id_medico = medico.id_medico AND paciente.id_paciente = consulta.id_paciente
+ORDER BY 1,2

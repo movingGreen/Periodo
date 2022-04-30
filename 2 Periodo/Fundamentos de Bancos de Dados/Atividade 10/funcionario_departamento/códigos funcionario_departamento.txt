@@ -1,0 +1,27 @@
+UPDATE departamento
+SET responsavel = 'Elias Viriato Jacó'
+WHERE responsavel = 'Micaela Fábia Vera'
+
+=======================
+
+UPDATE funcionario 
+SET telefone = '65 94511-1234'
+WHERE id_funcionario = 7
+
+=======================
+
+DELETE FROM funcionario
+WHERE nome = 'Micaela Fábia Vera'
+
+========================
+
+DELETE FROM funcionario WHERE id_funcionario = 8
+
+========================
+
+SELECT funcionario.nome, sexo, departamento.nome, ramal, dt_admissao
+FROM funcionario, departamento
+WHERE departamento.id_departamento = funcionario.id_departamento
+ORDER BY 1,2
+
+=========================

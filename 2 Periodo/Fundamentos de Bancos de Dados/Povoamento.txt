@@ -1,0 +1,31 @@
+nomes funcionario_departamento
+ 
+Albano Eliseu Carlos
+Guálter Narciso Ulisses
+Elias Viriato Jacó
+Marcos Eusébio Rodrigo
+Gaspar Célio Egídio 
+
+ Micaela Fábia Vera
+Gisele Albertina Gisela
+Eugénia Augusta Edite
+Fabíola Amélia Lorena
+Albertina Elizabete Lucrécia 
+
+‘Gestão de Pessoas’, ‘GP’, ‘1403’, ‘Keila’),
+(‘Financeiro’, ‘FN’, ‘1404’, ‘Renan’),
+(‘Comercial’, ‘CM’, ‘1405’, ‘Lucas’)
+
+=============================
+consulta departamento_funcionario
+SELECT departamento.nome, funcionario.nome, sexo, email
+FROM departamento, funcionario
+WHERE departamento.id_departamento = funcionario.id_departamento
+ORDER BY 1,2
+
+=============================
+consulta clinica_medica
+SELECT medico.nome, paciente.nome, diagnostico, prescricao, exames_solicitados, dt_consulta
+FROM consulta, medico, paciente
+WHERE consulta.id_medico = medico.id_medico AND consulta.id_paciente = paciente.id_paciente
+ORDER BY 1,2
