@@ -1,0 +1,105 @@
+INSERT INTO Pessoa 
+	(ID_Pessoa, nome, endereco, telefone, email)
+VALUES 
+	(1, 'Gil Rogrigo', 'Rua A. 10', '9 5587 2692', 'rogrigog@gmail.com'),
+	(2, 'Brumilda Jesus', 'Rua B. 11', '9 5949 2547', 'jesusb@gmail.com'),
+	(3, 'Gualter Hermina', 'Rua C. 12', '95663 8951', 'herminag@gmail.com'),
+	(4, 'Joaquim Dan', 'Rua D. 13', '9 5067 7936', 'dnj@gmail.com'),
+	(5, 'Ambrosio Apolonia', 'Rua E. 14', '9 5817 1950', 'apoloniaa@gmail.com')
+
+
+INSERT INTO Tipo_Item 
+	(ID_Tipo_Item, Descricao)
+VALUES 
+	(1, 'Roupas'),
+	(2, 'Alimentos'),
+	(3, 'Móveis'),
+	(4, 'Eletrodomesticos'),
+	(5, 'Materias de Construção')
+
+
+INSERT INTO tipo_saida 
+	(ID_Tipo_Saida, Descricao)
+VALUES 
+	(1, 'Consumido'),
+	(2, 'Vendido'),
+	(3, 'Doado'),
+	(4, 'Descartado'),
+	(5, 'Perdido')
+
+
+INSERT INTO doacao 
+	(ID_Doacao, DT_Doacao, Observacao, ID_Pessoa)
+VALUES 
+	(1, '10/10/2022', 'xxx...', 1),
+	(2, '11/05/2022', 'xxx...', 2),
+	(3, '12/03/2022', 'xxx...', 3),
+	(4, '13/07/2022', 'xxx...', 4),
+	(5, '14/12/2022', 'xxx...', 5),
+	(6, '15/11/2022', 'xxx...', 3),
+	(7, '16/09/2022', 'xxx...', 2),
+	(8, '17/02/2022', 'xxx...', 1),
+	(9, '18/10/2022', 'xxx...', 4),
+	(10, '19/06/2022', 'xxx...', 5)
+
+
+INSERT INTO item 
+	(ID_Item, Descricao, Qtd, ID_Tipo_Item)
+VALUES 
+	(1, 'Camisa', 3, 1),
+	(2, 'Vestido', 1, 1),
+	(3, 'Arroz 5Kg', 2, 2),
+	(4, 'Cadeira', 4, 3),
+	(5, 'Feijão 1Kg', 3, 2),
+	(6, 'Geladeira', 1, 4),
+	(7, 'Tijolo', 300, 5),
+	(8, 'Janela', 3, 5),
+	(9, 'Mesa', 2, 3),
+	(10, 'Freezer', 1, 4)
+
+
+INSERT INTO Saida 
+	(ID_Saida, DT_Saida, Observacao, ID_Tipo_Saida)
+VALUES 
+	(1, '04/12/2023', 'xxx...', 1),
+	(2, '08/11/2024', 'xxx...', 2),
+	(3, '24/10/2022', 'xxx...', 3),
+	(4, '19/07/2025', 'xxx...', 4),
+	(5, '26/12/2025', 'xxx...', 5),
+	(6, '23/08/2023', 'xxx...', 1),
+	(7, '04/12/2023', 'xxx...', 1),
+	(8, '08/11/2024', 'xxx...', 4),
+	(9, '24/10/2022', 'xxx...', 4),
+	(10, '19/07/2025', 'xxx...', 2)
+
+
+INSERT INTO Item_Doacao 
+	(Qt_Item, ID_Item, ID_Doacao)
+VALUES 
+	(10, 1, 1),
+	(5, 2, 2),
+	(4, 3, 3),
+	(7, 4, 4),
+	(10, 5, 5),
+	(1, 6, 6),
+	(500, 7, 7),
+	(3, 8, 8),
+	(3, 9, 9),
+	(2, 10, 10)
+
+
+INSERT INTO Item_Saida 
+	(Qt_Item, ID_Saida, ID_Item)
+VALUES 
+	(3, 1, 1),
+	(4, 2, 2),
+	(2, 3, 3),
+	(3, 4, 4),
+	(7, 5, 5),
+	(100, 6, 7),
+	(100, 7, 7),
+	(4, 8, 1),
+	(1, 9, 9),
+	(1, 10, 10)
+
+
