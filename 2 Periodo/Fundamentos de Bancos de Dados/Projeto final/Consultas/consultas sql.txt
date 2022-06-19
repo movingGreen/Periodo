@@ -1,0 +1,26 @@
+SELECT nome, SUM(QT_Item) AS "Quantidade Doada" 
+FROM pessoa, doacao, item_doacao
+WHERE doacao.id_pessoa = pessoa.id_pessoa
+AND doacao.id_doacao = item_doacao.id_doacao
+GROUP BY nome, telefone
+ORDER BY 1,2
+
+================================================
+
+SELECT tipo_item.descricao, SUM(QT_item) AS "Quantidade Doada " 
+FROM tipo_item, item, item_doacao
+WHERE tipo_item.id_tipo_item = item.id_tipo_item
+AND item_doacao.id_item = item.id_item
+AND tipo_item.descricao = 'Alimentos'
+GROUP BY tipo_item.descricao
+ORDER BY 1,2
+
+=================================================
+
+SELECT tipo_saida.descricao, SUM(item_saida.qt_item) AS "Quantidade"
+FROM item_saida, saida, tipo_saida
+WHERE item_saida.id_saida = saida.id_saida
+AND saida.id_tipo_saida = tipo_saida.id_tipo_saida
+AND tipo_saida.descricao = 'Descartado'
+GROUP BY tipo_saida.descricao
+ORDER BY 1,2
