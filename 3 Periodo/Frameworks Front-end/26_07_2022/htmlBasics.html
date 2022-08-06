@@ -13,9 +13,11 @@
 <body>
     <div class="container">
         <h1>HTML basics</h1>
+        <br>
         <p>
             HTML (HyperText Markup Language) is the code that is used to structure a web page and its content. For example, content could be structured within a set of paragraphs, a list of bulleted points, or using images and data tables. As the title suggests, this article will give you a basic understanding of HTML and its functions.
         </p>
+        <br>
         <h6>So what is HTML?</h6>
         <p>
             HTML is a <i>markup language</i> that defines the structure of your content. HTML consists of a series of <a href="https://developer.mozilla.org/en-US/docs/Glossary/Element" target="_blank">elements</a>, which you use to enclose, or wrap, different parts of the content to make it appear a certain way, or act a certain way. The enclosing a
@@ -72,8 +74,75 @@
         <br>
 
         <h6>Nesting elements</h6>
-        <p>You can put elements inside other elements too — this is called nesting. If we wanted to state that our cat, we could wrap the word "very" in a <code>&lt;strong&gt;</code> element, which means that the word is to be strongly emphasized:</p>
-        <code>&lt;p>My cat is &lt;strong>very&lt;/strong> grumpy.&lt;/p></code>
+        <p>You can put elements inside other elements too — this is called nesting. If we wanted to state that our cat, we could wrap the word "very" in a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong"><code>&lt;strong&gt;</code></a> element, which means that the word is to be strongly emphasized:</p>
+        <code>&lt;p>My cat is &lt;strong&gt;very&lt;/strong&gt; grumpy.&lt;/p&gt;</code>
+        <br>
+        <br>
+        <p>
+            You do however need to make sure that your elements are properly nested. In the example above, we opened the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p">&lt;p&gt;</a> element first, then the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong"><code>&lt;strong&gt;</code></a> element; therefore, we have to close the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong"><code>&lt;strong&gt;</code></a> element first, then the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p">&lt;p&gt;</a> element. The following is incorrect:
+        </p>
+        <code>&lt;p>My cat is &lt;strong&gt;very grumpy.&lt;/p&gt;&lt;/strong&gt;</code>
+        <br>
+        <br>
+        <p>
+            The elements have to open and close correctly so that they are clearly inside or outside one another. If they overlap as shown above, then your web browser will try to make the best guess at what you were trying to say, which can lead to unexpected results. So don't do it!
+        </p>
+        <br>
+        <h6>Empty elements</h6>
+        <p>Some elements have no content and are called empty elements. Take the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">&lt;img&gt;</a> element that we already have in our HTML page:</p>
+        <code>&lt;img src="images/firefox-icon.png" alt="My test image"&gt;</code>
+        <br>
+        <br>
+        <p>This contains two attributes, but there is no closing &lt;/img&gt; tag and no inner content. This is because an image element doesn't wrap affect it. Its purpose is to embed an image in the HTML page in the place it appears.</p>
+        <h6>Anatomy of an HTML document</h6>
+        <p>That wraps up the basics of individual HTML elements, but they aren't handy on their own. Now we'll look at how individual elements are combined to form an entire HTML page. Let's revisit the code we put into our index.html example (which we first met in the <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">Dealing with files article):</a></p>
+        <pre>
+            <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang=&quot;en-US&quot;&gt;
+        &lt;head&gt;
+            &lt;meta charset=&quot;utf-8&quot;&gt;
+            &lt;title&gt;My test page&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;img src=&quot;images/firefox-icon.png&quot; alt=&quot;My test image&quot;&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+            </code>
+        </pre>
+        <p>Here, we have the following:</p>
+        <ul>
+            <li>
+                <p>
+                    &lt;!DOCTYPE html&gt; —<a href="https://developer.mozilla.org/en-US/docs/Glossary/Doctype">doctype</a>. It is a required preamble. In the mists of time, when HTML was young (around 1991/92), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML, which could mean automatic error checking and other useful things. However these days, they don't do much and are basically just needed to make sure your document behaves correctly. That's all you need to know for now.
+                </p>
+            </li>
+            <li>
+                <p>
+                    &lt;html&gt;&lt;/html&gt; &mdash; the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html">&lt;html&gt;</a> element. This element wraps all the content on the entire page and is sometimes known as the root element.
+                </p>
+            </li>
+            <li>
+                <p>
+                    &lt;head&gt;&lt;/head&gt; &mdash; the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head">&lt;head&gt;</a> element. This element acts as a container for all the stuff you want to include on the HTML page that isn't the content you are showing to your page's viewers. This includes things like <a href="https://developer.mozilla.org/en-US/docs/Glossary/Keyword">keywords</a> and a page description that you want to appear in search results, CSS to style our content, character set declarations, and more.
+                </p>
+            </li>
+            <li>
+                <p>
+                    &lt;meta charset=&quot;utf-8&quot;&gt; &mdash; This element sets the character set your document should use to UTF-8 which includes most characters from the vast majority of written languages. Essentially, it can now handle any textual content you might put on it. There is no reason not to set this and it can help avoid some problems later on.
+                </p>
+            </li>
+            <li>
+                <p>
+                    &lt;title&gt;&lt;/title&gt; &mdash; the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title">&lt;title&gt;</a> element. This sets the title of your page, which is the title that appears in the browser tab the page is loaded in. It is also used to describe the page when you bookmark/favorite it.
+                </p>
+            </li>
+            <li>
+                <p>
+                    &lt;body&gt;&lt;/body&gt; &mdash; the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body">&lt;body&gt;</a> element. This contains all the content that you want to show to web users when they visit your page, whether that's text, images, videos, games, playable audio tracks, or whatever else.
+                </p>
+            </li>
+        </ul>
     </div>
 </body>
 </html>
