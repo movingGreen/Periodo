@@ -1,0 +1,198 @@
+object Calculadora123: TCalculadora123
+  Left = 1350
+  Height = 187
+  Top = 405
+  Width = 408
+  Caption = 'Calculadora123'
+  ClientHeight = 187
+  ClientWidth = 408
+  KeyPreview = True
+  OnKeyUp = FormKeyUp
+  LCLVersion = '2.2.0.4'
+  object campoResultado: TEdit
+    Left = 8
+    Height = 23
+    Top = 8
+    Width = 384
+    TabOrder = 0
+  end
+  object btn0: TBitBtn
+    Left = 8
+    Height = 30
+    Top = 152
+    Width = 75
+    Caption = '0'
+    OnClick = btn0Click
+    TabOrder = 1
+  end
+  object btn1: TBitBtn
+    Left = 8
+    Height = 30
+    Top = 120
+    Width = 75
+    Caption = '1'
+    OnClick = btn1Click
+    TabOrder = 2
+  end
+  object btn2: TBitBtn
+    Left = 88
+    Height = 30
+    Top = 120
+    Width = 75
+    Caption = '2'
+    OnClick = btn2Click
+    TabOrder = 3
+  end
+  object btn3: TBitBtn
+    Left = 168
+    Height = 30
+    Top = 120
+    Width = 75
+    Caption = '3'
+    TabOrder = 4
+  end
+  object btn4: TBitBtn
+    Left = 8
+    Height = 30
+    Top = 88
+    Width = 75
+    Caption = '4'
+    OnClick = btn4Click
+    TabOrder = 5
+  end
+  object btn5: TBitBtn
+    Left = 88
+    Height = 30
+    Top = 88
+    Width = 75
+    Caption = '5'
+    OnClick = btn5Click
+    TabOrder = 6
+  end
+  object btn6: TBitBtn
+    Left = 168
+    Height = 30
+    Top = 88
+    Width = 75
+    Caption = '6'
+    OnClick = btn6Click
+    TabOrder = 7
+  end
+  object btn7: TBitBtn
+    Left = 8
+    Height = 30
+    Top = 56
+    Width = 75
+    Caption = '7'
+    OnClick = btn7Click
+    TabOrder = 8
+  end
+  object btn8: TBitBtn
+    Left = 88
+    Height = 30
+    Top = 56
+    Width = 75
+    Caption = '8'
+    OnClick = btn8Click
+    TabOrder = 9
+  end
+  object btn9: TBitBtn
+    Left = 168
+    Height = 30
+    Top = 56
+    Width = 75
+    Caption = '9'
+    OnClick = btn9Click
+    TabOrder = 10
+  end
+  object btnFracao: TBitBtn
+    Left = 88
+    Height = 30
+    Top = 152
+    Width = 75
+    Caption = ','
+    OnClick = btnFracaoClick
+    TabOrder = 11
+  end
+  object btnDivisao: TBitBtn
+    Left = 168
+    Height = 30
+    Top = 152
+    Width = 75
+    Caption = '/'
+    OnClick = btnDivisaoClick
+    TabOrder = 12
+  end
+  object btnMais: TBitBtn
+    Left = 245
+    Height = 30
+    Top = 120
+    Width = 75
+    Caption = '+'
+    OnClick = btnMaisClick
+    TabOrder = 13
+  end
+  object btnMenos: TBitBtn
+    Left = 245
+    Height = 30
+    Top = 88
+    Width = 75
+    Caption = '-'
+    OnClick = btnMenosClick
+    TabOrder = 14
+  end
+  object btnVezes: TBitBtn
+    Left = 245
+    Height = 30
+    Top = 56
+    Width = 75
+    Caption = 'X'
+    OnClick = btnVezesClick
+    TabOrder = 15
+  end
+  object btnIgual: TBitBtn
+    Left = 245
+    Height = 30
+    Top = 152
+    Width = 75
+    Caption = '='
+    OnClick = btnIgualClick
+    TabOrder = 16
+  end
+  object btnLimparResultado: TBitBtn
+    Left = 320
+    Height = 30
+    Top = 152
+    Width = 75
+    Caption = 'AC'
+    OnClick = btnLimparResultadoClick
+    TabOrder = 17
+  end
+  object BitBtn1: TBitBtn
+    Left = 320
+    Height = 30
+    Top = 56
+    Width = 75
+    Caption = 'sin'
+    OnClick = BitBtn1Click
+    TabOrder = 18
+  end
+  object BitBtn2: TBitBtn
+    Left = 320
+    Height = 30
+    Top = 88
+    Width = 75
+    Caption = 'cos'
+    OnClick = BitBtn2Click
+    TabOrder = 19
+  end
+  object BitBtn3: TBitBtn
+    Left = 320
+    Height = 30
+    Top = 120
+    Width = 75
+    Caption = 'tan'
+    OnClick = BitBtn3Click
+    TabOrder = 20
+  end
+end

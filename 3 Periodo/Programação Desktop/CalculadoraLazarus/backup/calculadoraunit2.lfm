@@ -1,0 +1,165 @@
+object Calculadora: TCalculadora
+  Left = 1326
+  Height = 226
+  Top = 459
+  Width = 340
+  Caption = 'Calculadora'
+  ClientHeight = 226
+  ClientWidth = 340
+  LCLVersion = '2.2.0.4'
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 203
+    Width = 340
+    Panels = <>
+  end
+  object BitBtn1: TBitBtn
+    Left = 254
+    Height = 30
+    Top = 40
+    Width = 75
+    Caption = 'AC'
+    OnClick = BitBtn1Click
+    TabOrder = 1
+  end
+  object BitBtn2: TBitBtn
+    Left = 254
+    Height = 30
+    Top = 72
+    Width = 75
+    Caption = 'X'
+    TabOrder = 2
+  end
+  object Tela: TEdit
+    Left = 16
+    Height = 23
+    Top = 8
+    Width = 313
+    NumbersOnly = True
+    ParentShowHint = False
+    TabOrder = 3
+  end
+  object BitBtn3: TBitBtn
+    Left = 254
+    Height = 30
+    Top = 104
+    Width = 75
+    Caption = '-'
+    TabOrder = 4
+  end
+  object BitBtn4: TBitBtn
+    Left = 254
+    Height = 30
+    Top = 136
+    Width = 75
+    Caption = '+'
+    TabOrder = 5
+  end
+  object BitBtn5: TBitBtn
+    Left = 254
+    Height = 30
+    Top = 168
+    Width = 75
+    Caption = '='
+    TabOrder = 6
+  end
+  object BitBtn6: TBitBtn
+    Left = 176
+    Height = 30
+    Top = 72
+    Width = 75
+    Caption = '9'
+    TabOrder = 7
+  end
+  object BitBtn7: TBitBtn
+    Left = 176
+    Height = 30
+    Top = 104
+    Width = 75
+    Caption = '6'
+    TabOrder = 8
+  end
+  object BitBtn8: TBitBtn
+    Left = 176
+    Height = 30
+    Top = 136
+    Width = 75
+    Caption = '3'
+    TabOrder = 9
+  end
+  object BitBtn9: TBitBtn
+    Left = 176
+    Height = 30
+    Top = 168
+    Width = 75
+    Caption = '/'
+    TabOrder = 10
+  end
+  object BitBtn10: TBitBtn
+    Left = 98
+    Height = 30
+    Top = 72
+    Width = 75
+    Caption = '8'
+    TabOrder = 11
+  end
+  object BitBtn11: TBitBtn
+    Left = 98
+    Height = 30
+    Top = 104
+    Width = 75
+    Caption = '5'
+    TabOrder = 12
+  end
+  object BitBtn12: TBitBtn
+    Left = 98
+    Height = 30
+    Top = 136
+    Width = 75
+    Caption = '2'
+    TabOrder = 13
+  end
+  object BitBtn13: TBitBtn
+    Left = 98
+    Height = 30
+    Top = 168
+    Width = 75
+    Caption = ','
+    TabOrder = 14
+  end
+  object BitBtn14: TBitBtn
+    Left = 16
+    Height = 30
+    Top = 72
+    Width = 75
+    Caption = '7'
+    TabOrder = 15
+  end
+  object BitBtn15: TBitBtn
+    Left = 16
+    Height = 30
+    Top = 104
+    Width = 75
+    Caption = '4'
+    TabOrder = 16
+  end
+  object BitBtn16: TBitBtn
+    Left = 16
+    Height = 30
+    Top = 136
+    Width = 75
+    Caption = '1'
+    OnClick = BitBtn16Click
+    TabOrder = 17
+  end
+  object BitBtn17: TBitBtn
+    Left = 16
+    Height = 30
+    Top = 168
+    Width = 75
+    Caption = '0'
+    OnClick = BitBtn17Click
+    TabOrder = 18
+  end
+end
