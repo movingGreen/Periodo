@@ -1,0 +1,177 @@
+object frmCalculadora: TfrmCalculadora
+  Left = 2576
+  Height = 242
+  Top = 28
+  Width = 345
+  Caption = 'Calculadora IFMT'
+  ClientHeight = 242
+  ClientWidth = 345
+  LCLVersion = '2.2.0.4'
+  object edtResultado: TEdit
+    Left = 16
+    Height = 23
+    Top = 18
+    Width = 315
+    TabOrder = 0
+  end
+  object BitBtn1: TBitBtn
+    Left = 16
+    Height = 30
+    Top = 88
+    Width = 75
+    Caption = '7'
+    OnClick = BitBtn1Click
+    TabOrder = 1
+  end
+  object BitBtn2: TBitBtn
+    Left = 96
+    Height = 30
+    Top = 88
+    Width = 75
+    Caption = '8'
+    OnClick = BitBtn2Click
+    TabOrder = 2
+  end
+  object BitBtn3: TBitBtn
+    Left = 176
+    Height = 30
+    Top = 88
+    Width = 75
+    Caption = '9'
+    OnClick = BitBtn3Click
+    TabOrder = 3
+  end
+  object BitBtn4: TBitBtn
+    Left = 256
+    Height = 30
+    Top = 88
+    Width = 75
+    Caption = 'X'
+    OnClick = BitBtn4Click
+    TabOrder = 4
+  end
+  object BitBtn5: TBitBtn
+    Left = 16
+    Height = 30
+    Top = 120
+    Width = 75
+    Caption = '4'
+    OnClick = BitBtn5Click
+    TabOrder = 5
+  end
+  object BitBtn6: TBitBtn
+    Left = 96
+    Height = 30
+    Top = 120
+    Width = 75
+    Caption = '5'
+    OnClick = BitBtn6Click
+    TabOrder = 6
+  end
+  object BitBtn7: TBitBtn
+    Left = 176
+    Height = 30
+    Top = 120
+    Width = 75
+    Caption = '6'
+    OnClick = BitBtn7Click
+    TabOrder = 7
+  end
+  object BitBtn8: TBitBtn
+    Left = 256
+    Height = 30
+    Top = 120
+    Width = 75
+    Caption = '-'
+    OnClick = BitBtn8Click
+    TabOrder = 8
+  end
+  object BitBtn9: TBitBtn
+    Left = 16
+    Height = 30
+    Top = 152
+    Width = 75
+    Caption = '1'
+    OnClick = BitBtn9Click
+    TabOrder = 9
+  end
+  object BitBtn10: TBitBtn
+    Left = 96
+    Height = 30
+    Top = 152
+    Width = 75
+    Caption = '2'
+    OnClick = BitBtn10Click
+    TabOrder = 10
+  end
+  object BitBtn11: TBitBtn
+    Left = 176
+    Height = 30
+    Top = 152
+    Width = 75
+    Caption = '3'
+    OnClick = BitBtn11Click
+    TabOrder = 11
+  end
+  object BitBtn12: TBitBtn
+    Left = 256
+    Height = 30
+    Top = 152
+    Width = 75
+    Caption = '+'
+    OnClick = BitBtn12Click
+    TabOrder = 12
+  end
+  object btn0: TBitBtn
+    Left = 16
+    Height = 30
+    Top = 184
+    Width = 75
+    Caption = '0'
+    OnClick = btn0Click
+    TabOrder = 13
+  end
+  object BitBtn14: TBitBtn
+    Left = 96
+    Height = 30
+    Top = 184
+    Width = 75
+    Caption = ','
+    OnClick = BitBtn14Click
+    TabOrder = 14
+  end
+  object BitBtn15: TBitBtn
+    Left = 176
+    Height = 30
+    Top = 184
+    Width = 75
+    Caption = '/'
+    OnClick = BitBtn15Click
+    TabOrder = 15
+  end
+  object BitBtn16: TBitBtn
+    Left = 256
+    Height = 30
+    Top = 184
+    Width = 75
+    Caption = '='
+    OnClick = BitBtn16Click
+    TabOrder = 16
+  end
+  object BitBtn17: TBitBtn
+    Left = 256
+    Height = 30
+    Top = 56
+    Width = 75
+    Caption = 'AC'
+    OnClick = BitBtn17Click
+    TabOrder = 17
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 219
+    Width = 345
+    Panels = <>
+  end
+end

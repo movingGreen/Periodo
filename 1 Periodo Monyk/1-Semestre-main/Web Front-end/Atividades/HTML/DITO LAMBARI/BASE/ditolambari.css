@@ -1,0 +1,27 @@
+*{margin: 0; padding: 0;}
+body {font: 19px/1.4 arial, san-serif;}
+hgroup > h1{
+	font-size: 36px;
+	margin: 12px 0 12px 0;
+}
+hgroup a {color: #900; text-decoration: none; }
+h1 ~ h2 {
+	font size: 27px;
+	margin: 14px 0 14pz 0;
+	color: #090;
+}
+nav > ul {margin-left: 50px;}
+nav > ul > li:first-child > a {
+	color: #c60;
+	text-decoration: none;
+}
+nav > ul > li:first-child > a:hover{
+	color: #555;
+	text-decoration: underline;
+}
+nav> ul > li:last-child{
+	font-size: 26px;
+	list-style-type: square;
+}
+nav > ul > li:nth-child(3) {background: #ccc;
+}

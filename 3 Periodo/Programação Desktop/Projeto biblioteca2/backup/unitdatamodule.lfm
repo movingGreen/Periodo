@@ -1,0 +1,77 @@
+object DataModule1: TDataModule1
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  Height = 335
+  HorizontalOffset = 1274
+  VerticalOffset = 572
+  Width = 596
+  object ConObra: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Properties.Strings = (
+      'AutoEncodeStrings=True'
+      'controls_cp=CP_UTF8'
+    )
+    Connected = True
+    Port = 0
+    Database = 'C:\Users\Aluno\Documents\123\Projeto biblioteca2\BibliotecaDB\BibliotecaDB.db'
+    Protocol = 'sqlite'
+    LibraryLocation = 'C:\Users\Aluno\Documents\123\Projeto biblioteca2\sqlite3.dll'
+    Left = 48
+    Top = 40
+  end
+  object qryObra: TZQuery
+    Connection = ConObra
+    UpdateObject = qryUpdateObra
+    Active = True
+    SQL.Strings = (
+      'select * from obra'
+    )
+    Params = <>
+    Left = 128
+    Top = 40
+    object qryObraobr_codigo: TLargeintField
+      FieldKind = fkData
+      FieldName = 'obr_codigo'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryObratitulo: TStringField
+      FieldKind = fkData
+      FieldName = 'titulo'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 50
+    end
+    object qryObratipo_obra: TStringField
+      FieldKind = fkData
+      FieldName = 'tipo_obra'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 1
+    end
+    object qryObraedt_codigo: TLargeintField
+      FieldKind = fkData
+      FieldName = 'edt_codigo'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+  end
+  object qryUpdateObra: TZUpdateSQL
+    UseSequenceFieldForRefreshSQL = False
+    Left = 208
+    Top = 40
+  end
+end

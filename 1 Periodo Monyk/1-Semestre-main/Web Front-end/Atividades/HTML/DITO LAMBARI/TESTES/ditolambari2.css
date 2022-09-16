@@ -1,0 +1,101 @@
+*{margin: 0; padding: 0;}
+
+
+body > header{ padding:0; margin-left: 0}
+footer{ height:200px; background:#282a35; padding:0; margin: 0}
+body {font: 19px/1.4 arial, san-serif; margin: 25px; padding: 15px; border-bottom: 100}
+
+
+hgroup > h2{ 
+    font-size: 35px;
+    margin-left: 0;
+    position: static;
+}
+hgroup > p{
+    font-size: 20px;
+    margin: 0px 0 0px 0;
+    position: static;
+   }
+
+div {
+    background: #9E1717;
+    color: #9E1717;
+    padding: 5px;
+}
+
+h1 > a{
+    text-decoration: none;
+    color: #FFF;
+    position: absolute;
+    left: 180px;
+    top: 55px;
+}
+
+h1 a:hover {
+    background: #9E1717;
+    color: #F5D552; 
+    border-color: #FF6800;
+}
+
+p { 
+    font-size: 20px
+}
+
+
+
+hgroup > h1{
+    font-size: 36px;
+    margin: 12px 0 12px 0;
+}
+hgroup a {color: #157218; text-decoration: none; }
+
+h1 ~ h2 {
+    font size: 13px;
+    margin: 14px 0 14pz 0;
+    color: #f3801b;
+}
+nav > ul {margin-left: -17px; margin-right: -17px}
+nav > ul > li:first-child > a {
+    color: #FFF;
+    text-decoration: none;
+}
+nav > ul > li:first-child > a:hover{
+    color: #555;
+    text-decoration: underline;
+}
+nav> ul > li:last-child{
+    font-size: inherit;
+    list-style-type: square;
+
+}
+nav > ul > li:nth-child(3) {background: #ccc;
+}
+
+ul {
+    margin: -10;
+    padding:15px;
+}   
+
+li {
+    list-style: none; 
+    margin: 10px;
+    display: inline;
+    width: 100%;
+}
+li a {
+    padding: 20px 45px; 
+    margin:-13px;
+    font-weight: 520;
+    border: 5px solid #316414; /*borda e cor da caixa*/
+    background: #157218; /*cor de fundo da caixinha*/
+    text-decoration: none;
+    color:#FFF; /*cor da letra dentro da caixa*/
+
+}
+li a:hover {
+    background: #F5D552;
+    color: #000; 
+    border-color: #FF6800;
+}
+
+
