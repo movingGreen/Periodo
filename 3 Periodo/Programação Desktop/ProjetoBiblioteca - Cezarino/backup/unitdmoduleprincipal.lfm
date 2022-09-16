@@ -1,0 +1,60 @@
+object DMConexao: TDMConexao
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  Height = 472
+  HorizontalOffset = 1089
+  VerticalOffset = 233
+  Width = 739
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Properties.Strings = (
+      'AutoEncodeStrings=True'
+      'controls_cp=CP_UTF8'
+    )
+    Connected = True
+    AfterConnect = ZConnection1AfterConnect
+    Port = 0
+    Database = 'C:\Users\Aluno.DESKTOP-FUTQAD1\Documents\PDK 2022_2 05-08-2022\ProjetoBiblioteca\Bib.db'
+    Protocol = 'sqlite'
+    Left = 280
+    Top = 80
+  end
+  object QryObra: TZQuery
+    Connection = ZConnection1
+    SQL.Strings = (
+      'SELECT * FROM obra'
+      ''
+    )
+    Params = <>
+    Properties.Strings = (
+      'SELECT * FROM OBRA'
+    )
+    Left = 440
+    Top = 88
+    object QryObraaut_codigo: TLargeintField
+      FieldKind = fkData
+      FieldName = 'aut_codigo'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object QryObranome: TStringField
+      FieldKind = fkData
+      FieldName = 'nome'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 50
+    end
+  end
+  object UpdQryObra: TZUpdateSQL
+    UseSequenceFieldForRefreshSQL = True
+    Left = 371
+    Top = 170
+  end
+end

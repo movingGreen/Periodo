@@ -1,0 +1,40 @@
+object FormTelaPrincipal: TFormTelaPrincipal
+  Left = 420
+  Height = 639
+  Top = 231
+  Width = 858
+  Caption = 'Sistema de Biblioteca'
+  ClientHeight = 639
+  ClientWidth = 858
+  OnCreate = FormCreate
+  LCLVersion = '2.2.0.4'
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 616
+    Width = 858
+    Panels = <>
+  end
+  object DateTimePicker1: TDateTimePicker
+    Left = 760
+    Height = 23
+    Top = 616
+    Width = 83
+    CenturyFrom = 1941
+    MaxDate = 2958465
+    MinDate = -53780
+    TabOrder = 1
+    TrailingSeparator = False
+    TextForNullDate = 'NULL'
+    LeadingZeros = True
+    Kind = dtkDate
+    TimeFormat = tf24
+    TimeDisplay = tdHMS
+    DateMode = dmComboBox
+    Date = 44806
+    Time = 0.849143043982622
+    UseDefaultSeparators = True
+    HideDateTimeParts = []
+    MonthNames = 'Long'
+  end
+end
