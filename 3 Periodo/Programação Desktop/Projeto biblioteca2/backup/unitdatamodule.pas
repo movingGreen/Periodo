@@ -19,6 +19,7 @@ type
     qryObratipo_obra: TStringField;
     qryObratitulo: TStringField;
     qryUpdateObra: TZUpdateSQL;
+    procedure ConObraAfterConnect(Sender: TObject);
     procedure DataModuleCreate(Sender: TObject);
   private
 
@@ -36,6 +37,11 @@ implementation
 { TDataModule1 }
 
 procedure TDataModule1.DataModuleCreate(Sender: TObject);
+begin
+
+end;
+
+procedure TDataModule1.ConObraAfterConnect(Sender: TObject);
 begin
 
 end;

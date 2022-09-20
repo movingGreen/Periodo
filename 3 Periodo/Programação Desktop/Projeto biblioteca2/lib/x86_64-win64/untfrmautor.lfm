@@ -1,0 +1,9 @@
+object frmAutor: TfrmAutor
+  Left = 1312
+  Height = 132
+  Top = 646
+  Width = 273
+  Caption = 'CRUD de Autor'
+  OnCreate = FormCreate
+  LCLVersion = '2.2.2.0'
+end

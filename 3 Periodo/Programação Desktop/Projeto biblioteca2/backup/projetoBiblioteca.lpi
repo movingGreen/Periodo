@@ -41,19 +41,34 @@
         <IsPartOfProject Value="True"/>
       </Unit>
       <Unit>
-        <Filename Value="unitprincipal.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="formPrincipal"/>
-        <ResourceBaseClass Value="Form"/>
-        <UnitName Value="unitFormPrincipal"/>
-      </Unit>
-      <Unit>
         <Filename Value="unitdatamodule.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="DataModule1"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="unitDataModule"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitFormPrincipal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="formPrincipal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
+      <Unit>
+        <Filename Value="untfrmautor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmAutor"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="untfrmAutor"/>
+      </Unit>
+      <Unit>
+        <Filename Value="untfrmobra.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmObra"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
       </Unit>
     </Units>
   </ProjectOptions>
@@ -68,6 +83,9 @@
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>
+      <Debugging>
+        <DebugInfoType Value="dsDwarf2Set"/>
+      </Debugging>
       <Options>
         <Win32>
           <GraphicApplication Value="True"/>

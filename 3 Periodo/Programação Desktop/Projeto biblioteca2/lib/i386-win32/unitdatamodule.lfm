@@ -1,0 +1,122 @@
+object DataModule1: TDataModule1
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  Height = 162
+  HorizontalOffset = 709
+  VerticalOffset = 288
+  Width = 379
+  object ConObra: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Properties.Strings = (
+      'AutoEncodeStrings=True'
+      'controls_cp=CP_UTF8'
+    )
+    AfterConnect = ConObraAfterConnect
+    Port = 0
+    Database = '.\BibliotecaDB\BibliotecaDB'
+    Protocol = 'sqlite'
+    LibraryLocation = '.\sqlite3.dll'
+    Left = 48
+    Top = 40
+  end
+  object qryObra: TZQuery
+    Connection = ConObra
+    UpdateObject = qryUpdateObra
+    SQL.Strings = (
+      'select * from obra'
+    )
+    Params = <>
+    Left = 128
+    Top = 40
+    object qryObraobr_codigo: TLargeintField
+      FieldKind = fkData
+      FieldName = 'obr_codigo'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryObratitulo: TStringField
+      FieldKind = fkData
+      FieldName = 'titulo'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 50
+    end
+    object qryObratipo_obra: TStringField
+      FieldKind = fkData
+      FieldName = 'tipo_obra'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 1
+    end
+    object qryObraedt_codigo: TLargeintField
+      FieldKind = fkData
+      FieldName = 'edt_codigo'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+  end
+  object qryUpdateObra: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM obra'
+      'WHERE'
+      '  ((obra.obr_codigo IS NULL AND :OLD_obr_codigo IS NULL) OR (obra.obr_codigo = :OLD_obr_codigo))'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO obra'
+      '  (obr_codigo, titulo, tipo_obra, edt_codigo)'
+      'VALUES'
+      '  (:obr_codigo, :titulo, :tipo_obra, :edt_codigo)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE obra SET'
+      '  obr_codigo = :obr_codigo,'
+      '  titulo = :titulo,'
+      '  tipo_obra = :tipo_obra,'
+      '  edt_codigo = :edt_codigo'
+      'WHERE'
+      '  ((obra.obr_codigo IS NULL AND :OLD_obr_codigo IS NULL) OR (obra.obr_codigo = :OLD_obr_codigo))'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    Left = 208
+    Top = 40
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'obr_codigo'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'titulo'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'tipo_obra'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'edt_codigo'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_obr_codigo'
+        ParamType = ptUnknown
+      end>
+  end
+end

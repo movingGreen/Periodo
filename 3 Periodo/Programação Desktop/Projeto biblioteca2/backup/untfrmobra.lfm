@@ -1,0 +1,122 @@
+object frmObra: TfrmObra
+  Left = 1340
+  Height = 305
+  Top = 445
+  Width = 500
+  Caption = 'CRUD de Obra'
+  ClientHeight = 305
+  ClientWidth = 500
+  OnCreate = FormCreate
+  LCLVersion = '2.2.2.0'
+  object PageControl1: TPageControl
+    Left = 8
+    Height = 265
+    Top = 0
+    Width = 472
+    ActivePage = tabEditar
+    TabIndex = 1
+    TabOrder = 0
+    OnChange = PageControl1Change
+    object tabCadastro: TTabSheet
+      Caption = 'Consulta'
+      ClientHeight = 237
+      ClientWidth = 464
+      object DBgridObra: TDBGrid
+        Left = 0
+        Height = 237
+        Top = 0
+        Width = 464
+        Color = clWindow
+        Columns = <>
+        DataSource = dataSourceObra
+        Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgAutoSizeColumns]
+        ReadOnly = True
+        TabOrder = 0
+      end
+    end
+    object tabEditar: TTabSheet
+      Caption = 'Editar'
+      ClientHeight = 237
+      ClientWidth = 464
+      object labelTitulo: TLabel
+        Left = 36
+        Height = 15
+        Top = 28
+        Width = 30
+        Caption = 'Titulo'
+        ParentColor = False
+      end
+      object DBeditTitulo: TDBEdit
+        Left = 36
+        Height = 23
+        Top = 56
+        Width = 80
+        DataField = 'titulo'
+        DataSource = dataSourceObra
+        MaxLength = 50
+        TabOrder = 0
+      end
+      object DBeditTipoObra: TDBEdit
+        Left = 152
+        Height = 23
+        Top = 56
+        Width = 80
+        DataField = 'tipo_obra'
+        DataSource = dataSourceObra
+        MaxLength = 1
+        TabOrder = 1
+      end
+      object labelEditoraCodigo: TLabel
+        Left = 256
+        Height = 15
+        Top = 28
+        Width = 81
+        Caption = 'Editora_Codigo'
+        ParentColor = False
+      end
+      object labelTipoObra: TLabel
+        Left = 152
+        Height = 15
+        Top = 28
+        Width = 54
+        Caption = 'Tipo_Obra'
+        ParentColor = False
+      end
+      object DBNavigator1: TDBNavigator
+        Left = 36
+        Height = 25
+        Top = 101
+        Width = 241
+        BevelOuter = bvNone
+        ChildSizing.EnlargeHorizontal = crsScaleChilds
+        ChildSizing.EnlargeVertical = crsScaleChilds
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 100
+        ClientHeight = 25
+        ClientWidth = 241
+        DataSource = dataSourceObra
+        Options = []
+        TabOrder = 2
+      end
+      object DBComboBoxEditoraCodigo: TDBComboBox
+        Left = 256
+        Height = 23
+        Top = 56
+        Width = 100
+        DataField = 'edt_codigo'
+        DataSource = dataSourceObra
+        ItemHeight = 15
+        MaxLength = 0
+        TabOrder = 3
+      end
+    end
+  end
+  object dataSourceObra: TDataSource
+    DataSet = DataModule1.qryObra
+    OnDataChange = dataSourceObraDataChange
+    Left = 376
+    Top = 272
+  end
+end

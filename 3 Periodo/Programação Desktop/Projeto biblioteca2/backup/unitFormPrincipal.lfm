@@ -1,0 +1,33 @@
+object formPrincipal: TformPrincipal
+  Left = 1356
+  Height = 281
+  Top = 77
+  Width = 395
+  Caption = 'Sistema Gerenciador de Bibliotecas'
+  Menu = MainMenu1
+  LCLVersion = '2.2.2.0'
+  object MainMenu1: TMainMenu
+    Left = 265
+    Top = 99
+    object MenuItem1: TMenuItem
+      Caption = 'Cadastros'
+      object MenuItem5: TMenuItem
+        Caption = 'Autor'
+        OnClick = MenuItem5Click
+      end
+      object MenuItem6: TMenuItem
+        Caption = 'Obra'
+        OnClick = MenuItem6Click
+      end
+    end
+    object MenuItem2: TMenuItem
+      Caption = 'Processos'
+    end
+    object MenuItem3: TMenuItem
+      Caption = 'Rel&atório'
+    end
+    object MenuItem4: TMenuItem
+      Caption = 'Sair'
+    end
+  end
+end

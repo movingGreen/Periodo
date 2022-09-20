@@ -8,22 +8,9 @@
       <Unit>
         <Filename Value="projetoBiblioteca.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="2"/>
-        <CursorPos X="10" Y="13"/>
-        <UsageCount Value="20"/>
-        <Loaded Value="True"/>
-      </Unit>
-      <Unit>
-        <Filename Value="unitprincipal.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="formPrincipal"/>
-        <ResourceBaseClass Value="Form"/>
-        <UnitName Value="unitFormPrincipal"/>
-        <IsVisibleTab Value="True"/>
-        <CursorPos X="20" Y="34"/>
-        <UsageCount Value="20"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="56" Y="23"/>
+        <UsageCount Value="29"/>
       </Unit>
       <Unit>
         <Filename Value="unitdatamodule.pas"/>
@@ -32,43 +19,57 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="unitDataModule"/>
-        <EditorIndex Value="1"/>
-        <CursorPos X="10"/>
-        <UsageCount Value="20"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="27"/>
+        <CursorPos X="47" Y="27"/>
+        <UsageCount Value="29"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="unitFormPrincipal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="formPrincipal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="34"/>
+        <CursorPos X="9" Y="55"/>
+        <UsageCount Value="29"/>
+      </Unit>
+      <Unit>
+        <Filename Value="untfrmautor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmAutor"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="untfrmAutor"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="3" Y="33"/>
+        <UsageCount Value="29"/>
+      </Unit>
+      <Unit>
+        <Filename Value="untfrmobra.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmObra"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="32"/>
+        <CursorPos X="17" Y="43"/>
+        <UsageCount Value="28"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitprincipal.pas"/>
+        <ComponentName Value="formPrincipal"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="unitFormPrincipal"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="23"/>
+        <UsageCount Value="20"/>
+      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="6">
-      <Position>
-        <Filename Value="unitprincipal.pas"/>
-        <Caret Column="14"/>
-      </Position>
-      <Position>
-        <Filename Value="unitprincipal.pas"/>
-        <Caret Line="34" Column="3" TopLine="12"/>
-      </Position>
-      <Position>
-        <Filename Value="unitprincipal.pas"/>
-        <Caret Line="35" Column="3" TopLine="12"/>
-      </Position>
-      <Position>
-        <Filename Value="unitdatamodule.pas"/>
-        <Caret Column="10"/>
-      </Position>
-      <Position>
-        <Filename Value="unitprincipal.pas"/>
-        <Caret Line="32" Column="20" TopLine="12"/>
-      </Position>
-      <Position>
-        <Filename Value="unitprincipal.pas"/>
-        <Caret Line="33" Column="20" TopLine="12"/>
-      </Position>
-      <Position>
-        <Filename Value="unitdatamodule.pas"/>
-        <Caret Column="10"/>
-      </Position>
-    </JumpHistory>
+    <JumpHistory HistoryIndex="-1"/>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes ActiveMode=""/>
