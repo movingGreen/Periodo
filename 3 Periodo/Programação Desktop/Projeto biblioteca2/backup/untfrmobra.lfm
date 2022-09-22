@@ -108,6 +108,10 @@ object frmObra: TfrmObra
         DataField = 'edt_codigo'
         DataSource = dataSourceObra
         ItemHeight = 15
+        Items.Strings = (
+          '1 '
+          '2'
+        )
         MaxLength = 0
         TabOrder = 3
       end

@@ -1,7 +1,7 @@
 object frmObra: TfrmObra
-  Left = 1340
+  Left = 568
   Height = 305
-  Top = 445
+  Top = 266
   Width = 500
   Caption = 'CRUD de Obra'
   ClientHeight = 305

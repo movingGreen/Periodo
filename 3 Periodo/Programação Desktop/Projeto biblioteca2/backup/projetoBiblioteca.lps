@@ -20,7 +20,7 @@
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="unitDataModule"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="27"/>
+        <TopLine Value="25"/>
         <CursorPos X="47" Y="27"/>
         <UsageCount Value="29"/>
         <Loaded Value="True"/>
