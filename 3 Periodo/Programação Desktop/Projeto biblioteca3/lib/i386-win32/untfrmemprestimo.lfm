@@ -1,0 +1,9 @@
+object frmEmprestimo: TfrmEmprestimo
+  Left = 368
+  Height = 382
+  Top = 119
+  Width = 652
+  Caption = 'frmEmprestimo'
+  OnCreate = FormCreate
+  LCLVersion = '2.2.2.0'
+end

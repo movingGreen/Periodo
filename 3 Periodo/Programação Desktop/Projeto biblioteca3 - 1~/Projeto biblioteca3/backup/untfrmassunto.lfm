@@ -1,0 +1,80 @@
+object frmAssunto: TfrmAssunto
+  Left = 1309
+  Height = 317
+  Top = 635
+  Width = 362
+  Caption = 'frmAssunto'
+  ClientHeight = 317
+  ClientWidth = 362
+  LCLVersion = '2.2.2.0'
+  object PageControlAssunto: TPageControl
+    Left = 8
+    Height = 304
+    Top = 8
+    Width = 344
+    ActivePage = tabEditar
+    TabIndex = 1
+    TabOrder = 0
+    object tabConsulta: TTabSheet
+      Caption = 'Consulta'
+      ClientHeight = 276
+      ClientWidth = 336
+      object DBGridAssunto: TDBGrid
+        Left = 0
+        Height = 272
+        Top = 0
+        Width = 336
+        Color = clWindow
+        Columns = <>
+        DataSource = DataSourceAssunto
+        TabOrder = 0
+      end
+    end
+    object tabEditar: TTabSheet
+      Caption = 'Editar'
+      ClientHeight = 276
+      ClientWidth = 336
+      object labelDescricao: TLabel
+        Left = 36
+        Height = 15
+        Top = 56
+        Width = 51
+        Caption = 'Descrição'
+        ParentColor = False
+      end
+      object DBEditDescricao: TDBEdit
+        Left = 36
+        Height = 23
+        Top = 88
+        Width = 80
+        DataField = 'descricao'
+        DataSource = DataSourceAssunto
+        MaxLength = 50
+        TabOrder = 0
+      end
+      object DBNavigatorAssunto: TDBNavigator
+        Left = 36
+        Height = 25
+        Top = 136
+        Width = 241
+        BevelOuter = bvNone
+        ChildSizing.EnlargeHorizontal = crsScaleChilds
+        ChildSizing.EnlargeVertical = crsScaleChilds
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 100
+        ClientHeight = 25
+        ClientWidth = 241
+        DataSource = DataSourceAssunto
+        Options = []
+        TabOrder = 1
+      end
+    end
+  end
+  object DataSourceAssunto: TDataSource
+    DataSet = DataModule1.qryAssunto
+    Left = 427
+    Top = 229
+  end
+end

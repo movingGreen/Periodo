@@ -1,0 +1,103 @@
+object frmEmprestimo: TfrmEmprestimo
+  Left = 686
+  Height = 419
+  Top = 119
+  Width = 536
+  Caption = 'frmEmprestimo'
+  ClientHeight = 419
+  ClientWidth = 536
+  OnCreate = FormCreate
+  LCLVersion = '2.2.2.0'
+  object PageControl1: TPageControl
+    Left = 0
+    Height = 416
+    Top = 0
+    Width = 536
+    ActivePage = TabSheet2
+    TabIndex = 1
+    TabOrder = 0
+    object TabSheet1: TTabSheet
+      Caption = 'TabSheet1'
+      ClientHeight = 388
+      ClientWidth = 528
+      object DBGridEmprestimo: TDBGrid
+        Left = 0
+        Height = 388
+        Top = 0
+        Width = 528
+        Color = clWindow
+        Columns = <>
+        DataSource = dataSourceEmprestimo
+        TabOrder = 0
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'TabSheet2'
+      ClientHeight = 388
+      ClientWidth = 528
+      object Label6: TLabel
+        Left = 200
+        Height = 15
+        Top = 184
+        Width = 99
+        Caption = 'Data de Devolução'
+        ParentColor = False
+      end
+      object Label5: TLabel
+        Left = 8
+        Height = 15
+        Top = 184
+        Width = 108
+        Caption = 'Data do Emprestimo'
+        ParentColor = False
+      end
+      object Label4: TLabel
+        Left = 200
+        Height = 15
+        Top = 104
+        Width = 49
+        Caption = 'Exemplar'
+        ParentColor = False
+        OnClick = Label1Click
+      end
+      object Label3: TLabel
+        Left = 8
+        Height = 15
+        Top = 104
+        Width = 26
+        Caption = 'Obra'
+        ParentColor = False
+      end
+      object Label2: TLabel
+        Left = 200
+        Height = 15
+        Top = 16
+        Width = 43
+        Caption = 'Usuário '
+        ParentColor = False
+      end
+      object Label1: TLabel
+        Left = 8
+        Height = 15
+        Top = 16
+        Width = 123
+        Caption = 'Codigo do Emprestimo'
+        ParentColor = False
+        OnClick = Label1Click
+      end
+      object Label7: TLabel
+        Left = 8
+        Height = 15
+        Top = 256
+        Width = 62
+        Caption = 'Observação'
+        ParentColor = False
+      end
+    end
+  end
+  object dataSourceEmprestimo: TDataSource
+    DataSet = DataModule1.qryEmprestimo
+    Left = 440
+    Top = 344
+  end
+end

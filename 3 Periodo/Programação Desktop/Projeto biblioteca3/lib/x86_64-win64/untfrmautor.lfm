@@ -1,0 +1,84 @@
+object frmAutor: TfrmAutor
+  Left = 1307
+  Height = 384
+  Top = 106
+  Width = 504
+  Caption = 'CRUD de Autor'
+  ClientHeight = 384
+  ClientWidth = 504
+  OnCreate = FormCreate
+  LCLVersion = '2.2.2.0'
+  object PageControlAutor: TPageControl
+    Left = 8
+    Height = 336
+    Top = 8
+    Width = 480
+    ActivePage = tabConsulta
+    TabIndex = 0
+    TabOrder = 0
+    object tabConsulta: TTabSheet
+      Caption = 'Consulta'
+      ClientHeight = 308
+      ClientWidth = 472
+      object DBGridAutor: TDBGrid
+        Left = 0
+        Height = 312
+        Top = 0
+        Width = 472
+        Color = clWindow
+        Columns = <>
+        DataSource = dataSourceAutor
+        ReadOnly = True
+        TabOrder = 0
+      end
+    end
+    object tabEditar: TTabSheet
+      Caption = 'Editar'
+      ClientHeight = 308
+      ClientWidth = 472
+      object labelNome: TLabel
+        Left = 36
+        Height = 15
+        Top = 56
+        Width = 33
+        Caption = 'Nome'
+        ParentColor = False
+        OnClick = labelNomeClick
+      end
+      object DBNavigatorAutor: TDBNavigator
+        Left = 36
+        Height = 25
+        Top = 136
+        Width = 241
+        BevelOuter = bvNone
+        ChildSizing.EnlargeHorizontal = crsScaleChilds
+        ChildSizing.EnlargeVertical = crsScaleChilds
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 100
+        ClientHeight = 25
+        ClientWidth = 241
+        DataSource = dataSourceAutor
+        Options = []
+        TabOrder = 0
+      end
+      object DBEditNome: TDBEdit
+        Left = 36
+        Height = 23
+        Top = 88
+        Width = 80
+        DataField = 'nome'
+        DataSource = dataSourceAutor
+        MaxLength = 50
+        TabOrder = 1
+      end
+    end
+  end
+  object dataSourceAutor: TDataSource
+    DataSet = DataModule1.qryAutor
+    OnDataChange = dataSourceAutorDataChange
+    Left = 129
+    Top = 352
+  end
+end
