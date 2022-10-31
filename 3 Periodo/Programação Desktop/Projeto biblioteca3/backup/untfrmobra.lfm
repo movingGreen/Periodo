@@ -1,11 +1,11 @@
 object frmObra: TfrmObra
-  Left = 1005
+  Left = 853
   Height = 617
-  Top = 84
-  Width = 677
+  Top = 78
+  Width = 653
   Caption = 'CRUD de Obra'
   ClientHeight = 617
-  ClientWidth = 677
+  ClientWidth = 653
   OnCreate = FormCreate
   LCLVersion = '2.2.2.0'
   object PageControlObra: TPageControl
@@ -67,14 +67,14 @@ object frmObra: TfrmObra
         MaxLength = 1
         TabOrder = 1
       end
-      object labelEditoraCodigo: TLabel
+      object labelEditora: TLabel
         Left = 32
         Height = 15
         Top = 104
-        Width = 95
-        Caption = 'Codigo da Editora'
+        Width = 37
+        Caption = 'Editora'
         ParentColor = False
-        OnClick = labelEditoraCodigoClick
+        OnClick = labelEditoraClick
       end
       object labelTipoObra: TLabel
         Left = 152
@@ -117,12 +117,12 @@ object frmObra: TfrmObra
         TabOrder = 3
       end
       object PageControlObraExternas: TPageControl
-        Left = 0
+        Left = 1
         Height = 336
         Top = 248
         Width = 648
-        ActivePage = tabObraAutor
-        TabIndex = 1
+        ActivePage = tabObraExemplar
+        TabIndex = 0
         TabOrder = 4
         OnChange = PageControlObraExternasChange
         object tabObraExemplar: TTabSheet
@@ -133,7 +133,7 @@ object frmObra: TfrmObra
             Left = 0
             Height = 255
             Top = 0
-            Width = 616
+            Width = 640
             Color = clWindow
             Columns = <>
             DataSource = dataSourceObraExemplar
@@ -166,7 +166,7 @@ object frmObra: TfrmObra
             Left = 0
             Height = 255
             Top = 0
-            Width = 616
+            Width = 640
             Color = clWindow
             Columns = <>
             DataSource = dataSourceObraAutor
@@ -197,7 +197,7 @@ object frmObra: TfrmObra
           ClientWidth = 640
           object DBGridObraAssunto: TDBGrid
             Left = 0
-            Height = 240
+            Height = 256
             Top = 0
             Width = 640
             Color = clWindow

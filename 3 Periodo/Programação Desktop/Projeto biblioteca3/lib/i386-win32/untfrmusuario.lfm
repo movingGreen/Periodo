@@ -1,7 +1,7 @@
 object frmUsuario: TfrmUsuario
-  Left = 1129
+  Left = 12
   Height = 427
-  Top = 404
+  Top = 173
   Width = 758
   Caption = 'frmUsuario'
   ClientHeight = 427
@@ -20,10 +20,10 @@ object frmUsuario: TfrmUsuario
       ClientHeight = 396
       ClientWidth = 752
       object DBGridUsuario: TDBGrid
-        Left = 0
-        Height = 336
+        Left = 4
+        Height = 400
         Top = 0
-        Width = 744
+        Width = 750
         Color = clWindow
         Columns = <        
           item
@@ -96,6 +96,16 @@ object frmUsuario: TfrmUsuario
         MaxLength = 50
         TabOrder = 0
       end
+      object DBEditLogradouro: TDBEdit
+        Left = 184
+        Height = 23
+        Top = 48
+        Width = 80
+        DataField = 'logradouro'
+        DataSource = dataSourceUsuario
+        MaxLength = 50
+        TabOrder = 9
+      end
       object DBEditNumero: TDBEdit
         Left = 336
         Height = 23
@@ -106,15 +116,25 @@ object frmUsuario: TfrmUsuario
         MaxLength = 6
         TabOrder = 1
       end
-      object DBEditUF: TDBEdit
-        Left = 336
+      object DBEditComplemento: TDBEdit
+        Left = 488
+        Height = 23
+        Top = 48
+        Width = 104
+        DataField = 'complemento'
+        DataSource = dataSourceUsuario
+        MaxLength = 50
+        TabOrder = 5
+      end
+      object DBEditBairro: TDBEdit
+        Left = 40
         Height = 23
         Top = 152
         Width = 80
-        DataField = 'uf'
+        DataField = 'bairro'
         DataSource = dataSourceUsuario
-        MaxLength = 2
-        TabOrder = 2
+        MaxLength = 50
+        TabOrder = 8
       end
       object DBEditCidade: TDBEdit
         Left = 184
@@ -126,6 +146,16 @@ object frmUsuario: TfrmUsuario
         MaxLength = 50
         TabOrder = 3
       end
+      object DBEditUF: TDBEdit
+        Left = 336
+        Height = 23
+        Top = 152
+        Width = 80
+        DataField = 'uf'
+        DataSource = dataSourceUsuario
+        MaxLength = 2
+        TabOrder = 2
+      end
       object DBEditCep: TDBEdit
         Left = 488
         Height = 23
@@ -135,16 +165,6 @@ object frmUsuario: TfrmUsuario
         DataSource = dataSourceUsuario
         MaxLength = 8
         TabOrder = 4
-      end
-      object DBEditComplemento: TDBEdit
-        Left = 488
-        Height = 23
-        Top = 48
-        Width = 104
-        DataField = 'complemento'
-        DataSource = dataSourceUsuario
-        MaxLength = 50
-        TabOrder = 5
       end
       object DBEditTelefone: TDBEdit
         Left = 184
@@ -165,26 +185,6 @@ object frmUsuario: TfrmUsuario
         DataSource = dataSourceUsuario
         MaxLength = 11
         TabOrder = 7
-      end
-      object DBEditBairro: TDBEdit
-        Left = 40
-        Height = 23
-        Top = 152
-        Width = 80
-        DataField = 'bairro'
-        DataSource = dataSourceUsuario
-        MaxLength = 50
-        TabOrder = 8
-      end
-      object DBEditLogradouro: TDBEdit
-        Left = 184
-        Height = 23
-        Top = 48
-        Width = 80
-        DataField = 'logradouro'
-        DataSource = dataSourceUsuario
-        MaxLength = 50
-        TabOrder = 9
       end
       object labelNome: TLabel
         Left = 40

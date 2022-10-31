@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, StdCtrls, ComCtrls,
-  DBGrids;
+  DBGrids, DBCtrls;
 
 type
 
@@ -14,19 +14,30 @@ type
 
   TfrmEmprestimo = class(TForm)
     dataSourceEmprestimo: TDataSource;
+    DBeditCodigoEmprestimo: TDBEdit;
+    DBeditUsuario: TDBEdit;
+    DBeditObra: TDBEdit;
+    DBeditExemplar: TDBEdit;
+    DBeditDataEmprestimo: TDBEdit;
+    DBeditDataDevolucao: TDBEdit;
+    DBeditObservacao: TDBEdit;
     DBGridEmprestimo: TDBGrid;
-    Label1: TLabel;
-    Label2: TLabel;
-    Label3: TLabel;
-    Label4: TLabel;
-    Label5: TLabel;
-    Label6: TLabel;
-    Label7: TLabel;
+    DBnavigatorEmprestimo: TDBNavigator;
+    labelCodigoEmprestimo: TLabel;
+    labelUsuario: TLabel;
+    labelObra: TLabel;
+    labelExemplar: TLabel;
+    labelDataEmprestimo: TLabel;
+    labelDataDevolucao: TLabel;
+    labelObservacao: TLabel;
     PageControl1: TPageControl;
+    pageControlUsuarioExemplar: TPageControl;
     TabSheet1: TTabSheet;
     TabSheet2: TTabSheet;
+    tabUsuario: TTabSheet;
+    tabExemplar: TTabSheet;
     procedure FormCreate(Sender: TObject);
-    procedure Label1Click(Sender: TObject);
+    procedure labelCodigoEmprestimoClick(Sender: TObject);
   private
 
   public
@@ -47,7 +58,7 @@ begin
 
 end;
 
-procedure TfrmEmprestimo.Label1Click(Sender: TObject);
+procedure TfrmEmprestimo.labelCodigoEmprestimoClick(Sender: TObject);
 begin
 
 end;

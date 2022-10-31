@@ -1,10 +1,10 @@
 object DataModule1: TDataModule1
   OnCreate = DataModuleCreate
   OldCreateOrder = False
-  Height = 399
-  HorizontalOffset = 1036
-  VerticalOffset = 5
-  Width = 280
+  Height = 473
+  HorizontalOffset = 1091
+  VerticalOffset = 15
+  Width = 255
   object ConBiblioteca: TZConnection
     ControlsCodePage = cCP_UTF8
     AutoEncodeStrings = True
@@ -534,5 +534,21 @@ object DataModule1: TDataModule1
         Name = 'OLD_usu_codigo'
         ParamType = ptUnknown
       end>
+  end
+  object qryEmprestimo: TZQuery
+    Connection = ConBiblioteca
+    UpdateObject = qryUpdateEmprestimo
+    Active = True
+    SQL.Strings = (
+      'select * from emprestimo'
+    )
+    Params = <>
+    Left = 104
+    Top = 368
+  end
+  object qryUpdateEmprestimo: TZUpdateSQL
+    UseSequenceFieldForRefreshSQL = False
+    Left = 184
+    Top = 368
   end
 end

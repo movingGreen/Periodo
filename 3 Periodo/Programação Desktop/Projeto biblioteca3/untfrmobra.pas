@@ -25,14 +25,14 @@ type
         DBGridObraAutor: TDBGrid;
         DBGridObraAssunto: TDBGrid;
         DBgridObra: TDBGrid;
-        DBLookupComboBox1: TDBLookupComboBox;
+        DBlookUpComboBoxEditora: TDBLookupComboBox;
         DBNavigatorObraAssunto: TDBNavigator;
         DBNavigatorObra: TDBNavigator;
         DBNavigatorObraAutor: TDBNavigator;
         DBNavigatorObraExemplar: TDBNavigator;
         labelTitulo: TLabel;
         labelTipoObra: TLabel;
-        labelEditoraCodigo: TLabel;
+        labelEditora: TLabel;
         labelObraCodigo: TLabel;
         PageControlObraExternas: TPageControl;
         PageControlObra: TPageControl;
@@ -56,7 +56,7 @@ type
         procedure dataSourceObraExemplarDataChange(Sender: TObject;
           Field: TField);
         procedure FormCreate(Sender: TObject);
-        procedure labelEditoraCodigoClick(Sender: TObject);
+        procedure labelEditoraClick(Sender: TObject);
         procedure labelObraCodigoClick(Sender: TObject);
         procedure PageControlObraExternasChange(Sender: TObject);
         procedure PageControlObraChange(Sender: TObject);
@@ -82,7 +82,7 @@ begin
 
 end;
 
-procedure TfrmObra.labelEditoraCodigoClick(Sender: TObject);
+procedure TfrmObra.labelEditoraClick(Sender: TObject);
 begin
 
 end;
