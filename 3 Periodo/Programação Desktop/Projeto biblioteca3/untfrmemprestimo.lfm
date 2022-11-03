@@ -1,5 +1,5 @@
 object frmEmprestimo: TfrmEmprestimo
-  Left = 396
+  Left = 864
   Height = 574
   Top = 80
   Width = 796
@@ -13,11 +13,11 @@ object frmEmprestimo: TfrmEmprestimo
     Height = 574
     Top = 0
     Width = 796
-    ActivePage = TabSheet2
+    ActivePage = tabEmprestimo
     TabIndex = 1
     TabOrder = 0
-    object TabSheet1: TTabSheet
-      Caption = 'TabSheet1'
+    object tabConsulta: TTabSheet
+      Caption = 'Consulta'
       ClientHeight = 546
       ClientWidth = 788
       object DBGridEmprestimo: TDBGrid
@@ -31,8 +31,8 @@ object frmEmprestimo: TfrmEmprestimo
         TabOrder = 0
       end
     end
-    object TabSheet2: TTabSheet
-      Caption = 'TabSheet2'
+    object tabEmprestimo: TTabSheet
+      Caption = 'Emprestimo'
       ClientHeight = 546
       ClientWidth = 788
       object labelDataDevolucao: TLabel
@@ -158,36 +158,6 @@ object frmEmprestimo: TfrmEmprestimo
         MaxLength = 0
         TabOrder = 1
       end
-      object DBeditDataEmprestimo: TDBEdit
-        Left = 8
-        Height = 23
-        Top = 264
-        Width = 120
-        DataField = 'data_emprestimo'
-        DataSource = dataSourceEmprestimo
-        MaxLength = 0
-        TabOrder = 2
-      end
-      object DBeditDataDevolucao: TDBEdit
-        Left = 8
-        Height = 23
-        Top = 336
-        Width = 123
-        DataField = 'data_prevista_devolucao'
-        DataSource = dataSourceEmprestimo
-        MaxLength = 0
-        TabOrder = 3
-      end
-      object DBeditObservacao: TDBEdit
-        Left = 8
-        Height = 23
-        Top = 408
-        Width = 184
-        DataField = 'Observacao'
-        DataSource = dataSourceEmprestimo
-        MaxLength = 0
-        TabOrder = 4
-      end
       object DBnavigatorEmprestimo: TDBNavigator
         Left = 224
         Height = 28
@@ -204,7 +174,7 @@ object frmEmprestimo: TfrmEmprestimo
         ClientWidth = 281
         DataSource = dataSourceEmprestimo
         Options = []
-        TabOrder = 5
+        TabOrder = 2
       end
       object DBlookUpComboBoxObra: TDBLookupComboBox
         Left = 8
@@ -218,7 +188,7 @@ object frmEmprestimo: TfrmEmprestimo
         ListFieldIndex = 0
         ListSource = dataSourceObra
         LookupCache = False
-        TabOrder = 6
+        TabOrder = 3
       end
       object DBlookUpComboBoxExemplar: TDBLookupComboBox
         Left = 8
@@ -231,7 +201,7 @@ object frmEmprestimo: TfrmEmprestimo
         ListFieldIndex = 0
         ListSource = dataSourceExemplar
         LookupCache = False
-        TabOrder = 7
+        TabOrder = 4
       end
       object DBlookUpComboBoxUsuario: TDBLookupComboBox
         Left = 224
@@ -245,6 +215,43 @@ object frmEmprestimo: TfrmEmprestimo
         ListFieldIndex = 0
         ListSource = dataSourceUsuario
         LookupCache = False
+        TabOrder = 5
+      end
+      object DBdateEditEmprestimo: TDBDateEdit
+        Left = 8
+        Height = 23
+        Top = 264
+        Width = 123
+        CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+        DateOrder = doNone
+        ButtonWidth = 23
+        NumGlyphs = 1
+        MaxLength = 0
+        TabOrder = 6
+        DataField = 'data_emprestimo'
+        DataSource = dataSourceEmprestimo
+      end
+      object DBdateEditDataDevolucao: TDBDateEdit
+        Left = 8
+        Height = 23
+        Top = 336
+        Width = 123
+        CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+        DateOrder = doNone
+        ButtonWidth = 23
+        NumGlyphs = 1
+        MaxLength = 0
+        TabOrder = 7
+        DataField = 'data_prevista_devolucao'
+        DataSource = dataSourceEmprestimo
+      end
+      object DBmemoObservacao: TDBMemo
+        Left = 8
+        Height = 90
+        Top = 408
+        Width = 150
+        DataField = 'Observacao'
+        DataSource = dataSourceEmprestimo
         TabOrder = 8
       end
     end
@@ -273,7 +280,6 @@ object frmEmprestimo: TfrmEmprestimo
   object qryEmprestimoExemplar: TZQuery
     Connection = DataModule1.ConBiblioteca
     UpdateObject = qryUpdateEmprestimoExemplar
-    Active = True
     SQL.Strings = (
       'select * '
       'from exemplar'

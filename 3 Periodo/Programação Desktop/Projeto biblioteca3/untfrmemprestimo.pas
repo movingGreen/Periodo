@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, StdCtrls, ComCtrls,
-  DBGrids, DBCtrls, ZDataset, ZSqlUpdate;
+  DBGrids, DBCtrls, DBExtCtrls, ZDataset, ZSqlUpdate;
 
 type
 
@@ -18,10 +18,9 @@ type
     dataSourceObra: TDataSource;
     dataSourceUsuario: TDataSource;
     dataSourceEmprestimo: TDataSource;
+    DBdateEditDataDevolucao: TDBDateEdit;
+    DBdateEditEmprestimo: TDBDateEdit;
     DBeditCodigoEmprestimo: TDBEdit;
-    DBeditDataEmprestimo: TDBEdit;
-    DBeditDataDevolucao: TDBEdit;
-    DBeditObservacao: TDBEdit;
     DBGrid1: TDBGrid;
     DBGridEmprestimoObra: TDBGrid;
     DBGridEmprestimoUsuario: TDBGrid;
@@ -29,6 +28,7 @@ type
     DBlookUpComboBoxExemplar: TDBLookupComboBox;
     DBlookUpComboBoxUsuario: TDBLookupComboBox;
     DBlookUpComboBoxObra: TDBLookupComboBox;
+    DBmemoObservacao: TDBMemo;
     DBnavigatorEmprestimo: TDBNavigator;
     labelCodigoEmprestimo: TLabel;
     labelUsuario: TLabel;
@@ -39,8 +39,8 @@ type
     labelObservacao: TLabel;
     PageControl1: TPageControl;
     pageControlUsuarioExemplar: TPageControl;
-    TabSheet1: TTabSheet;
-    TabSheet2: TTabSheet;
+    tabConsulta: TTabSheet;
+    tabEmprestimo: TTabSheet;
     tabObra: TTabSheet;
     tabUsuario: TTabSheet;
     tabExemplar: TTabSheet;

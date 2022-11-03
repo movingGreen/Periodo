@@ -61,7 +61,6 @@
         <CursorPos X="3" Y="87"/>
         <UsageCount Value="78"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="untfrmeditora.pas"/>
@@ -94,7 +93,6 @@
         <CursorPos X="31" Y="4"/>
         <UsageCount Value="64"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="untfrmemprestimo.pas"/>
@@ -104,7 +102,7 @@
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="55"/>
+        <TopLine Value="52"/>
         <CursorPos X="3" Y="75"/>
         <UsageCount Value="49"/>
         <Loaded Value="True"/>
@@ -144,42 +142,6 @@
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="untfrmemprestimo.pas"/>
-        <Caret Line="56" Column="3" TopLine="37"/>
-      </Position>
-      <Position>
-        <Filename Value="untfrmemprestimo.pas"/>
-        <Caret Line="57" Column="3" TopLine="38"/>
-      </Position>
-      <Position>
-        <Filename Value="untfrmemprestimo.pas"/>
-        <Caret Line="58" Column="3" TopLine="39"/>
-      </Position>
-      <Position>
-        <Filename Value="untfrmemprestimo.pas"/>
-        <Caret Line="59" Column="3" TopLine="40"/>
-      </Position>
-      <Position>
-        <Filename Value="untfrmemprestimo.pas"/>
-        <Caret Line="60" Column="3" TopLine="41"/>
-      </Position>
-      <Position>
-        <Filename Value="untfrmemprestimo.pas"/>
-        <Caret Line="61" Column="3" TopLine="42"/>
-      </Position>
-      <Position>
-        <Filename Value="untfrmemprestimo.pas"/>
-        <Caret Line="55" Column="12"/>
-      </Position>
-      <Position>
-        <Filename Value="untfrmemprestimo.pas"/>
-        <Caret Line="56" Column="12" TopLine="33"/>
-      </Position>
-      <Position>
-        <Filename Value="untfrmemprestimo.pas"/>
-        <Caret Line="57" Column="12" TopLine="34"/>
-      </Position>
       <Position>
         <Filename Value="untfrmemprestimo.pas"/>
         <Caret Line="58" Column="12" TopLine="35"/>
@@ -263,6 +225,42 @@
       <Position>
         <Filename Value="untfrmemprestimo.pas"/>
         <Caret Line="74" Column="3" TopLine="54"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="75" Column="3" TopLine="55"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="76" Column="3" TopLine="56"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="77" Column="3" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="76" Column="3" TopLine="56"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="75" Column="3" TopLine="55"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="76" Column="3" TopLine="56"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="75" Column="3" TopLine="55"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="76" Column="3"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="75" Column="3" TopLine="52"/>
       </Position>
     </JumpHistory>
     <RunParams>
