@@ -25,7 +25,7 @@ type
         DBGridObraAutor: TDBGrid;
         DBGridObraAssunto: TDBGrid;
         DBgridObra: TDBGrid;
-        DBLookupComboBox1: TDBLookupComboBox;
+        DBlookUpComboBoxEditora: TDBLookupComboBox;
         DBNavigatorObraAssunto: TDBNavigator;
         DBNavigatorObra: TDBNavigator;
         DBNavigatorObraAutor: TDBNavigator;

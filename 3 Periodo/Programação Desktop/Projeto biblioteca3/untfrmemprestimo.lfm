@@ -1,11 +1,11 @@
 object frmEmprestimo: TfrmEmprestimo
-  Left = 447
+  Left = 396
   Height = 574
-  Top = 87
-  Width = 801
+  Top = 80
+  Width = 796
   Caption = 'frmEmprestimo'
   ClientHeight = 574
-  ClientWidth = 801
+  ClientWidth = 796
   OnCreate = FormCreate
   LCLVersion = '2.2.2.0'
   object PageControl1: TPageControl
@@ -22,9 +22,9 @@ object frmEmprestimo: TfrmEmprestimo
       ClientWidth = 788
       object DBGridEmprestimo: TDBGrid
         Left = 0
-        Height = 470
+        Height = 550
         Top = 0
-        Width = 648
+        Width = 792
         Color = clWindow
         Columns = <>
         DataSource = dataSourceEmprestimo
@@ -95,20 +95,56 @@ object frmEmprestimo: TfrmEmprestimo
       end
       object pageControlUsuarioExemplar: TPageControl
         Left = 224
-        Height = 424
+        Height = 430
         Top = 120
-        Width = 552
-        ActivePage = tabObra
-        TabIndex = 1
+        Width = 568
+        ActivePage = tabExemplar
+        TabIndex = 2
         TabOrder = 0
         object tabUsuario: TTabSheet
           Caption = 'Usuario'
+          ClientHeight = 402
+          ClientWidth = 560
+          object DBGridEmprestimoUsuario: TDBGrid
+            Left = 0
+            Height = 406
+            Top = 0
+            Width = 560
+            Color = clWindow
+            Columns = <>
+            DataSource = dataSourceUsuario
+            TabOrder = 0
+          end
         end
         object tabObra: TTabSheet
           Caption = 'Obra'
+          ClientHeight = 402
+          ClientWidth = 560
+          object DBGridEmprestimoObra: TDBGrid
+            Left = 0
+            Height = 408
+            Top = 0
+            Width = 560
+            Color = clWindow
+            Columns = <>
+            DataSource = dataSourceObra
+            TabOrder = 0
+          end
         end
         object tabExemplar: TTabSheet
           Caption = 'Exemplar'
+          ClientHeight = 402
+          ClientWidth = 560
+          object DBGrid1: TDBGrid
+            Left = 0
+            Height = 406
+            Top = 0
+            Width = 560
+            Color = clWindow
+            Columns = <>
+            DataSource = dataSourceEmprestimoExemplar
+            TabOrder = 0
+          end
         end
       end
       object DBeditCodigoEmprestimo: TDBEdit
@@ -215,22 +251,57 @@ object frmEmprestimo: TfrmEmprestimo
   end
   object dataSourceEmprestimo: TDataSource
     DataSet = DataModule1.qryEmprestimo
-    Left = 608
-    Top = 24
+    Left = 600
+    Top = 40
   end
   object dataSourceExemplar: TDataSource
     DataSet = frmObra.qryObraExemplar
-    Left = 720
+    OnDataChange = dataSourceExemplarDataChange
+    Left = 680
     Top = 80
   end
   object dataSourceObra: TDataSource
     DataSet = DataModule1.qryObra
-    Left = 720
+    Left = 680
     Top = 24
   end
   object dataSourceUsuario: TDataSource
     DataSet = DataModule1.qryUsuario
-    Left = 608
-    Top = 80
+    Left = 600
+    Top = 96
+  end
+  object qryEmprestimoExemplar: TZQuery
+    Connection = DataModule1.ConBiblioteca
+    UpdateObject = qryUpdateEmprestimoExemplar
+    Active = True
+    SQL.Strings = (
+      'select * '
+      'from exemplar'
+      'where exemplar.obr_codigo = :obr_codigo'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'obr_codigo'
+        ParamType = ptUnknown
+      end>
+    DataSource = dataSourceEmprestimoExemplar
+    Left = 730
+    Top = 184
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'obr_codigo'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryUpdateEmprestimoExemplar: TZUpdateSQL
+    UseSequenceFieldForRefreshSQL = False
+    Left = 730
+    Top = 241
+  end
+  object dataSourceEmprestimoExemplar: TDataSource
+    Left = 584
+    Top = 184
   end
 end

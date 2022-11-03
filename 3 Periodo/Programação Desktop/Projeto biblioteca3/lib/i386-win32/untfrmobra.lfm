@@ -1,7 +1,7 @@
 object frmObra: TfrmObra
-  Left = 359
+  Left = 576
   Height = 617
-  Top = 53
+  Top = 134
   Width = 653
   Caption = 'CRUD de Obra'
   ClientHeight = 617
@@ -67,14 +67,14 @@ object frmObra: TfrmObra
         MaxLength = 1
         TabOrder = 1
       end
-      object labelEditoraCodigo: TLabel
+      object labelEditora: TLabel
         Left = 32
         Height = 15
         Top = 104
-        Width = 95
-        Caption = 'Codigo da Editora'
+        Width = 37
+        Caption = 'Editora'
         ParentColor = False
-        OnClick = labelEditoraCodigoClick
+        OnClick = labelEditoraClick
       end
       object labelTipoObra: TLabel
         Left = 152
@@ -102,7 +102,7 @@ object frmObra: TfrmObra
         Options = []
         TabOrder = 2
       end
-      object DBLookupComboBox1: TDBLookupComboBox
+      object DBlookUpComboBoxEditora: TDBLookupComboBox
         Left = 32
         Height = 23
         Top = 132

@@ -6,13 +6,14 @@ interface
 
 uses
   Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, StdCtrls, ComCtrls,
-  DBGrids, DBCtrls;
+  DBGrids, DBCtrls, ZDataset, ZSqlUpdate;
 
 type
 
   { TfrmEmprestimo }
 
   TfrmEmprestimo = class(TForm)
+    dataSourceEmprestimoExemplar: TDataSource;
     dataSourceExemplar: TDataSource;
     dataSourceObra: TDataSource;
     dataSourceUsuario: TDataSource;
@@ -21,6 +22,9 @@ type
     DBeditDataEmprestimo: TDBEdit;
     DBeditDataDevolucao: TDBEdit;
     DBeditObservacao: TDBEdit;
+    DBGrid1: TDBGrid;
+    DBGridEmprestimoObra: TDBGrid;
+    DBGridEmprestimoUsuario: TDBGrid;
     DBGridEmprestimo: TDBGrid;
     DBlookUpComboBoxExemplar: TDBLookupComboBox;
     DBlookUpComboBoxUsuario: TDBLookupComboBox;
@@ -40,6 +44,9 @@ type
     tabObra: TTabSheet;
     tabUsuario: TTabSheet;
     tabExemplar: TTabSheet;
+    qryEmprestimoExemplar: TZQuery;
+    qryUpdateEmprestimoExemplar: TZUpdateSQL;
+    procedure dataSourceExemplarDataChange(Sender: TObject; Field: TField);
     procedure FormCreate(Sender: TObject);
     procedure labelCodigoEmprestimoClick(Sender: TObject);
   private
@@ -58,6 +65,12 @@ implementation
 { TfrmEmprestimo }
 
 procedure TfrmEmprestimo.FormCreate(Sender: TObject);
+begin
+
+end;
+
+procedure TfrmEmprestimo.dataSourceExemplarDataChange(Sender: TObject;
+  Field: TField);
 begin
 
 end;

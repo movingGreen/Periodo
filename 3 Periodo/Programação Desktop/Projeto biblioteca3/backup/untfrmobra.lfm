@@ -1,7 +1,7 @@
 object frmObra: TfrmObra
-  Left = 853
+  Left = 700
   Height = 617
-  Top = 78
+  Top = 214
   Width = 653
   Caption = 'CRUD de Obra'
   ClientHeight = 617
@@ -102,7 +102,7 @@ object frmObra: TfrmObra
         Options = []
         TabOrder = 2
       end
-      object DBLookupComboBox1: TDBLookupComboBox
+      object DBlookUpComboBoxEditora: TDBLookupComboBox
         Left = 32
         Height = 23
         Top = 132

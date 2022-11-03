@@ -1,25 +1,25 @@
 object frmEmprestimo: TfrmEmprestimo
-  Left = 422
-  Height = 494
-  Top = 136
-  Width = 652
+  Left = 288
+  Height = 574
+  Top = 100
+  Width = 797
   Caption = 'frmEmprestimo'
-  ClientHeight = 494
-  ClientWidth = 652
+  ClientHeight = 574
+  ClientWidth = 797
   OnCreate = FormCreate
   LCLVersion = '2.2.2.0'
   object PageControl1: TPageControl
     Left = 0
-    Height = 494
+    Height = 574
     Top = 0
-    Width = 652
+    Width = 796
     ActivePage = TabSheet2
     TabIndex = 1
     TabOrder = 0
     object TabSheet1: TTabSheet
       Caption = 'TabSheet1'
-      ClientHeight = 466
-      ClientWidth = 644
+      ClientHeight = 546
+      ClientWidth = 788
       object DBGridEmprestimo: TDBGrid
         Left = 0
         Height = 470
@@ -33,8 +33,8 @@ object frmEmprestimo: TfrmEmprestimo
     end
     object TabSheet2: TTabSheet
       Caption = 'TabSheet2'
-      ClientHeight = 466
-      ClientWidth = 644
+      ClientHeight = 546
+      ClientWidth = 788
       object labelDataDevolucao: TLabel
         Left = 8
         Height = 15
@@ -95,14 +95,17 @@ object frmEmprestimo: TfrmEmprestimo
       end
       object pageControlUsuarioExemplar: TPageControl
         Left = 224
-        Height = 344
+        Height = 424
         Top = 120
-        Width = 416
+        Width = 552
         ActivePage = tabUsuario
         TabIndex = 0
         TabOrder = 0
         object tabUsuario: TTabSheet
           Caption = 'Usuario'
+        end
+        object tabObra: TTabSheet
+          Caption = 'Obra'
         end
         object tabExemplar: TTabSheet
           Caption = 'Exemplar'
@@ -111,46 +114,13 @@ object frmEmprestimo: TfrmEmprestimo
       object DBeditCodigoEmprestimo: TDBEdit
         Left = 8
         Height = 23
-        Top = 49
+        Top = 48
         Width = 120
         DataField = 'emp_codigo'
         DataSource = dataSourceEmprestimo
         Alignment = taRightJustify
         MaxLength = 0
         TabOrder = 1
-      end
-      object DBeditUsuario: TDBEdit
-        Left = 224
-        Height = 23
-        Top = 48
-        Width = 184
-        DataField = 'usu_codigo'
-        DataSource = dataSourceEmprestimo
-        Alignment = taRightJustify
-        MaxLength = 0
-        TabOrder = 2
-      end
-      object DBeditObra: TDBEdit
-        Left = 8
-        Height = 23
-        Top = 120
-        Width = 184
-        DataField = 'obr_codigo'
-        DataSource = dataSourceEmprestimo
-        Alignment = taRightJustify
-        MaxLength = 0
-        TabOrder = 3
-      end
-      object DBeditExemplar: TDBEdit
-        Left = 8
-        Height = 23
-        Top = 192
-        Width = 184
-        DataField = 'exe_numero'
-        DataSource = dataSourceEmprestimo
-        Alignment = taRightJustify
-        MaxLength = 0
-        TabOrder = 4
       end
       object DBeditDataEmprestimo: TDBEdit
         Left = 8
@@ -160,7 +130,7 @@ object frmEmprestimo: TfrmEmprestimo
         DataField = 'data_emprestimo'
         DataSource = dataSourceEmprestimo
         MaxLength = 0
-        TabOrder = 5
+        TabOrder = 2
       end
       object DBeditDataDevolucao: TDBEdit
         Left = 8
@@ -170,7 +140,7 @@ object frmEmprestimo: TfrmEmprestimo
         DataField = 'data_prevista_devolucao'
         DataSource = dataSourceEmprestimo
         MaxLength = 0
-        TabOrder = 6
+        TabOrder = 3
       end
       object DBeditObservacao: TDBEdit
         Left = 8
@@ -180,7 +150,7 @@ object frmEmprestimo: TfrmEmprestimo
         DataField = 'Observacao'
         DataSource = dataSourceEmprestimo
         MaxLength = 0
-        TabOrder = 7
+        TabOrder = 4
       end
       object DBnavigatorEmprestimo: TDBNavigator
         Left = 224
@@ -198,13 +168,104 @@ object frmEmprestimo: TfrmEmprestimo
         ClientWidth = 281
         DataSource = dataSourceEmprestimo
         Options = []
+        TabOrder = 5
+      end
+      object DBlookUpComboBoxObra: TDBLookupComboBox
+        Left = 8
+        Height = 23
+        Top = 120
+        Width = 160
+        DataField = 'obr_codigo'
+        DataSource = dataSourceEmprestimo
+        KeyField = 'obr_codigo'
+        ListField = 'titulo'
+        ListFieldIndex = 0
+        ListSource = dataSourceObra
+        LookupCache = False
+        TabOrder = 6
+      end
+      object DBlookUpComboBoxExemplar: TDBLookupComboBox
+        Left = 8
+        Height = 23
+        Top = 192
+        Width = 185
+        DataField = 'exe_numero'
+        DataSource = dataSourceEmprestimo
+        ListField = 'exe_numero'
+        ListFieldIndex = 0
+        ListSource = dataSourceExemplar
+        LookupCache = False
+        TabOrder = 7
+      end
+      object DBlookUpComboBoxUsuario: TDBLookupComboBox
+        Left = 224
+        Height = 23
+        Top = 48
+        Width = 184
+        DataField = 'usu_codigo'
+        DataSource = dataSourceEmprestimo
+        KeyField = 'usu_codigo'
+        ListField = 'nome'
+        ListFieldIndex = 0
+        ListSource = dataSourceUsuario
+        LookupCache = False
         TabOrder = 8
       end
     end
   end
   object dataSourceEmprestimo: TDataSource
     DataSet = DataModule1.qryEmprestimo
-    Left = 616
-    Top = 32
+    Left = 600
+    Top = 40
+  end
+  object dataSourceExemplar: TDataSource
+    DataSet = frmObra.qryObraExemplar
+    OnDataChange = dataSourceExemplarDataChange
+    Left = 680
+    Top = 80
+  end
+  object dataSourceObra: TDataSource
+    DataSet = DataModule1.qryObra
+    Left = 680
+    Top = 24
+  end
+  object dataSourceUsuario: TDataSource
+    DataSet = DataModule1.qryUsuario
+    Left = 600
+    Top = 96
+  end
+  object qryEmprestimoExemplar: TZQuery
+    Connection = DataModule1.ConBiblioteca
+    UpdateObject = qryUpdateEmprestimoExemplar
+    Active = True
+    SQL.Strings = (
+      'select * '
+      'from exemplar'
+      'where exemplar.obr_codigo = :obr_codigo'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'obr_codigo'
+        ParamType = ptUnknown
+      end>
+    DataSource = dataSourceEmprestimoExemplar
+    Left = 730
+    Top = 184
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'obr_codigo'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryUpdateEmprestimoExemplar: TZUpdateSQL
+    UseSequenceFieldForRefreshSQL = False
+    Left = 730
+    Top = 241
+  end
+  object dataSourceEmprestimoExemplar: TDataSource
+    Left = 584
+    Top = 184
   end
 end
