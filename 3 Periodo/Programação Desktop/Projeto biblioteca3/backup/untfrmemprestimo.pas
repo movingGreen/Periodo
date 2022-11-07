@@ -21,7 +21,6 @@ type
     DBdateEditDataDevolucao: TDBDateEdit;
     DBdateEditEmprestimo: TDBDateEdit;
     DBeditCodigoEmprestimo: TDBEdit;
-    DBeditObservacao: TDBEdit;
     DBGrid1: TDBGrid;
     DBGridEmprestimoObra: TDBGrid;
     DBGridEmprestimoUsuario: TDBGrid;
@@ -29,7 +28,7 @@ type
     DBlookUpComboBoxExemplar: TDBLookupComboBox;
     DBlookUpComboBoxUsuario: TDBLookupComboBox;
     DBlookUpComboBoxObra: TDBLookupComboBox;
-    DBmemo: TDBMemo;
+    DBmemoObservacao: TDBMemo;
     DBnavigatorEmprestimo: TDBNavigator;
     labelCodigoEmprestimo: TLabel;
     labelUsuario: TLabel;
@@ -48,6 +47,7 @@ type
     qryEmprestimoExemplar: TZQuery;
     qryUpdateEmprestimoExemplar: TZUpdateSQL;
     procedure dataSourceExemplarDataChange(Sender: TObject; Field: TField);
+    procedure DBlookUpComboBoxExemplarChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure labelCodigoEmprestimoClick(Sender: TObject);
   private
@@ -72,6 +72,11 @@ end;
 
 procedure TfrmEmprestimo.dataSourceExemplarDataChange(Sender: TObject;
   Field: TField);
+begin
+
+end;
+
+procedure TfrmEmprestimo.DBlookUpComboBoxExemplarChange(Sender: TObject);
 begin
 
 end;

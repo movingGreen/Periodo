@@ -1,7 +1,7 @@
 object frmUsuario: TfrmUsuario
-  Left = 473
+  Left = 12
   Height = 427
-  Top = 130
+  Top = 173
   Width = 758
   Caption = 'frmUsuario'
   ClientHeight = 427
@@ -12,8 +12,8 @@ object frmUsuario: TfrmUsuario
     Height = 424
     Top = 0
     Width = 760
-    ActivePage = tabConsulta
-    TabIndex = 0
+    ActivePage = tabEditar
+    TabIndex = 1
     TabOrder = 0
     object tabConsulta: TTabSheet
       Caption = 'Consulta'
@@ -96,6 +96,16 @@ object frmUsuario: TfrmUsuario
         MaxLength = 50
         TabOrder = 0
       end
+      object DBEditLogradouro: TDBEdit
+        Left = 184
+        Height = 23
+        Top = 48
+        Width = 80
+        DataField = 'logradouro'
+        DataSource = dataSourceUsuario
+        MaxLength = 50
+        TabOrder = 9
+      end
       object DBEditNumero: TDBEdit
         Left = 336
         Height = 23
@@ -106,15 +116,25 @@ object frmUsuario: TfrmUsuario
         MaxLength = 6
         TabOrder = 1
       end
-      object DBEditUF: TDBEdit
-        Left = 336
+      object DBEditComplemento: TDBEdit
+        Left = 488
+        Height = 23
+        Top = 48
+        Width = 104
+        DataField = 'complemento'
+        DataSource = dataSourceUsuario
+        MaxLength = 50
+        TabOrder = 5
+      end
+      object DBEditBairro: TDBEdit
+        Left = 40
         Height = 23
         Top = 152
         Width = 80
-        DataField = 'uf'
+        DataField = 'bairro'
         DataSource = dataSourceUsuario
-        MaxLength = 2
-        TabOrder = 2
+        MaxLength = 50
+        TabOrder = 8
       end
       object DBEditCidade: TDBEdit
         Left = 184
@@ -126,6 +146,16 @@ object frmUsuario: TfrmUsuario
         MaxLength = 50
         TabOrder = 3
       end
+      object DBEditUF: TDBEdit
+        Left = 336
+        Height = 23
+        Top = 152
+        Width = 80
+        DataField = 'uf'
+        DataSource = dataSourceUsuario
+        MaxLength = 2
+        TabOrder = 2
+      end
       object DBEditCep: TDBEdit
         Left = 488
         Height = 23
@@ -135,16 +165,6 @@ object frmUsuario: TfrmUsuario
         DataSource = dataSourceUsuario
         MaxLength = 8
         TabOrder = 4
-      end
-      object DBEditComplemento: TDBEdit
-        Left = 488
-        Height = 23
-        Top = 48
-        Width = 104
-        DataField = 'complemento'
-        DataSource = dataSourceUsuario
-        MaxLength = 50
-        TabOrder = 5
       end
       object DBEditTelefone: TDBEdit
         Left = 184
@@ -165,26 +185,6 @@ object frmUsuario: TfrmUsuario
         DataSource = dataSourceUsuario
         MaxLength = 11
         TabOrder = 7
-      end
-      object DBEditBairro: TDBEdit
-        Left = 40
-        Height = 23
-        Top = 152
-        Width = 80
-        DataField = 'bairro'
-        DataSource = dataSourceUsuario
-        MaxLength = 50
-        TabOrder = 8
-      end
-      object DBEditLogradouro: TDBEdit
-        Left = 184
-        Height = 23
-        Top = 48
-        Width = 80
-        DataField = 'logradouro'
-        DataSource = dataSourceUsuario
-        MaxLength = 50
-        TabOrder = 9
       end
       object labelNome: TLabel
         Left = 40
@@ -267,10 +267,10 @@ object frmUsuario: TfrmUsuario
         ParentColor = False
       end
       object DBNavigatorUsuario: TDBNavigator
-        Left = 56
-        Height = 25
-        Top = 336
-        Width = 241
+        Left = 96
+        Height = 40
+        Top = 320
+        Width = 416
         BevelOuter = bvNone
         ChildSizing.EnlargeHorizontal = crsScaleChilds
         ChildSizing.EnlargeVertical = crsScaleChilds
@@ -278,8 +278,8 @@ object frmUsuario: TfrmUsuario
         ChildSizing.ShrinkVertical = crsScaleChilds
         ChildSizing.Layout = cclLeftToRightThenTopToBottom
         ChildSizing.ControlsPerLine = 100
-        ClientHeight = 25
-        ClientWidth = 241
+        ClientHeight = 40
+        ClientWidth = 416
         DataSource = dataSourceUsuario
         Options = []
         TabOrder = 10

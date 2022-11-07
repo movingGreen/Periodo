@@ -14,9 +14,11 @@ type
 
   TfrmAutor = class(TForm)
     dataSourceAutor: TDataSource;
+    DBeditCodigoNome: TDBEdit;
     DBEditNome: TDBEdit;
     DBGridAutor: TDBGrid;
     DBNavigatorAutor: TDBNavigator;
+    labelCodigoAutor: TLabel;
     labelNome: TLabel;
     tabConsulta: TTabSheet;
     tabEditar: TTabSheet;

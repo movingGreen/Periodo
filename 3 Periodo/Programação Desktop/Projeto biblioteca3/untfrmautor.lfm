@@ -1,11 +1,11 @@
 object frmAutor: TfrmAutor
-  Left = 1307
-  Height = 384
-  Top = 106
-  Width = 504
+  Left = 1305
+  Height = 348
+  Top = 105
+  Width = 486
   Caption = 'CRUD de Autor'
-  ClientHeight = 384
-  ClientWidth = 504
+  ClientHeight = 348
+  ClientWidth = 486
   OnCreate = FormCreate
   LCLVersion = '2.2.2.0'
   object PageControlAutor: TPageControl
@@ -28,6 +28,7 @@ object frmAutor: TfrmAutor
         Color = clWindow
         Columns = <>
         DataSource = dataSourceAutor
+        Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgAutoSizeColumns]
         ReadOnly = True
         TabOrder = 0
       end
@@ -37,9 +38,9 @@ object frmAutor: TfrmAutor
       ClientHeight = 308
       ClientWidth = 472
       object labelNome: TLabel
-        Left = 36
+        Left = 165
         Height = 15
-        Top = 56
+        Top = 64
         Width = 33
         Caption = 'Nome'
         ParentColor = False
@@ -64,21 +65,40 @@ object frmAutor: TfrmAutor
         TabOrder = 0
       end
       object DBEditNome: TDBEdit
-        Left = 36
+        Left = 165
         Height = 23
-        Top = 88
-        Width = 80
+        Top = 96
+        Width = 112
         DataField = 'nome'
         DataSource = dataSourceAutor
         MaxLength = 50
         TabOrder = 1
+      end
+      object labelCodigoAutor: TLabel
+        Left = 36
+        Height = 15
+        Top = 64
+        Width = 89
+        Caption = 'Codigo do Autor'
+        ParentColor = False
+      end
+      object DBeditCodigoNome: TDBEdit
+        Left = 36
+        Height = 23
+        Top = 96
+        Width = 68
+        DataField = 'aut_codigo'
+        DataSource = dataSourceAutor
+        Alignment = taRightJustify
+        MaxLength = 0
+        TabOrder = 2
       end
     end
   end
   object dataSourceAutor: TDataSource
     DataSet = DataModule1.qryAutor
     OnDataChange = dataSourceAutorDataChange
-    Left = 129
-    Top = 352
+    Left = 48
+    Top = 296
   end
 end

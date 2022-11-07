@@ -14,10 +14,12 @@ type
 
   TfrmEditora = class(TForm)
     DataSourceEditora: TDataSource;
+    DBEdit1: TDBEdit;
     DBEditNome: TDBEdit;
     DBGridEditora: TDBGrid;
     DBNavigatorEditora: TDBNavigator;
     labelNome: TLabel;
+    labelCodigoEditora: TLabel;
     PageControlEditora: TPageControl;
     TabConsulta: TTabSheet;
     TabEditar: TTabSheet;

@@ -1,7 +1,7 @@
 object frmObra: TfrmObra
-  Left = 700
+  Left = 1152
   Height = 617
-  Top = 214
+  Top = 150
   Width = 653
   Caption = 'CRUD de Obra'
   ClientHeight = 617
@@ -13,8 +13,8 @@ object frmObra: TfrmObra
     Height = 716
     Top = 8
     Width = 800
-    ActivePage = tabEditar
-    TabIndex = 1
+    ActivePage = tabConsulta
+    TabIndex = 0
     TabOrder = 0
     OnChange = PageControlObraChange
     object tabConsulta: TTabSheet
@@ -23,9 +23,9 @@ object frmObra: TfrmObra
       ClientWidth = 792
       object DBgridObra: TDBGrid
         Left = 0
-        Height = 527
+        Height = 584
         Top = 0
-        Width = 621
+        Width = 648
         Color = clWindow
         Columns = <>
         DataSource = dataSourceObra
@@ -271,6 +271,7 @@ object frmObra: TfrmObra
   object qryObraAutor: TZQuery
     Connection = DataModule1.ConBiblioteca
     UpdateObject = qryUpdateObraAutor
+    Active = True
     SQL.Strings = (
       'select obra_autor.*, autor.nome from obra_autor, autor'
       'where  '
@@ -285,6 +286,9 @@ object frmObra: TfrmObra
         ParamType = ptUnknown
       end>
     DataSource = dataSourceObra
+    MasterFields = 'obr_codigo'
+    MasterSource = dataSourceObra
+    LinkedFields = 'obr_codigo'
     Left = 560
     Top = 312
     ParamData = <    
@@ -349,6 +353,7 @@ object frmObra: TfrmObra
   object qryObraAssunto: TZQuery
     Connection = DataModule1.ConBiblioteca
     UpdateObject = qryUpdateObraAssunto
+    Active = True
     SQL.Strings = (
       'select obra_assunto.*, assunto.descricao'
       ' from '
@@ -365,6 +370,9 @@ object frmObra: TfrmObra
         ParamType = ptUnknown
       end>
     DataSource = dataSourceObra
+    MasterFields = 'obr_codigo'
+    MasterSource = dataSourceObra
+    LinkedFields = 'obr_codigo'
     Left = 560
     Top = 432
     ParamData = <    
@@ -451,6 +459,7 @@ object frmObra: TfrmObra
   object qryObraExemplar: TZQuery
     Connection = DataModule1.ConBiblioteca
     UpdateObject = qryUpdateObraExemplar
+    Active = True
     SQL.Strings = (
       'select * '
       'from exemplar'
@@ -463,6 +472,9 @@ object frmObra: TfrmObra
         ParamType = ptUnknown
       end>
     DataSource = dataSourceObra
+    MasterFields = 'obr_codigo'
+    MasterSource = dataSourceObra
+    LinkedFields = 'obr_codigo'
     Left = 480
     Top = 312
     ParamData = <    

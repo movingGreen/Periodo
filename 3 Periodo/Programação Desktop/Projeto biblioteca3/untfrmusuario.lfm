@@ -28,57 +28,61 @@ object frmUsuario: TfrmUsuario
         Columns = <        
           item
             Title.Caption = 'usu_codigo'
+            Width = 76
             FieldName = 'usu_codigo'
           end        
           item
             Title.Caption = 'nome'
-            Width = 100
+            Width = 60
             FieldName = 'nome'
           end        
           item
             Title.Caption = 'logradouro'
-            Width = 100
+            Width = 74
             FieldName = 'logradouro'
           end        
           item
             Title.Caption = 'numero'
+            Width = 57
             FieldName = 'numero'
           end        
           item
             Title.Caption = 'complemento'
-            Width = 100
+            Width = 90
             FieldName = 'complemento'
           end        
           item
             Title.Caption = 'bairro'
-            Width = 100
+            Width = 49
             FieldName = 'bairro'
           end        
           item
             Title.Caption = 'cidade'
-            Width = 100
+            Width = 82
             FieldName = 'cidade'
           end        
           item
             Title.Caption = 'uf'
-            Width = 50
+            Width = 32
             FieldName = 'uf'
           end        
           item
             Title.Caption = 'cep'
+            Width = 57
             FieldName = 'cep'
           end        
           item
             Title.Caption = 'telefone'
-            Width = 100
+            Width = 63
             FieldName = 'telefone'
           end        
           item
             Title.Caption = 'cpf'
-            Width = 100
+            Width = 81
             FieldName = 'cpf'
           end>
         DataSource = dataSourceUsuario
+        Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgAutoSizeColumns]
         TabOrder = 0
       end
     end
@@ -267,10 +271,10 @@ object frmUsuario: TfrmUsuario
         ParentColor = False
       end
       object DBNavigatorUsuario: TDBNavigator
-        Left = 56
-        Height = 25
-        Top = 336
-        Width = 241
+        Left = 96
+        Height = 40
+        Top = 320
+        Width = 416
         BevelOuter = bvNone
         ChildSizing.EnlargeHorizontal = crsScaleChilds
         ChildSizing.EnlargeVertical = crsScaleChilds
@@ -278,8 +282,8 @@ object frmUsuario: TfrmUsuario
         ChildSizing.ShrinkVertical = crsScaleChilds
         ChildSizing.Layout = cclLeftToRightThenTopToBottom
         ChildSizing.ControlsPerLine = 100
-        ClientHeight = 25
-        ClientWidth = 241
+        ClientHeight = 40
+        ClientWidth = 416
         DataSource = dataSourceUsuario
         Options = []
         TabOrder = 10

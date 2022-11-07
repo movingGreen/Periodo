@@ -1,10 +1,10 @@
 object DataModule1: TDataModule1
   OnCreate = DataModuleCreate
   OldCreateOrder = False
-  Height = 399
-  HorizontalOffset = 1602
-  VerticalOffset = 5
-  Width = 280
+  Height = 473
+  HorizontalOffset = 1292
+  VerticalOffset = 92
+  Width = 255
   object ConBiblioteca: TZConnection
     ControlsCodePage = cCP_UTF8
     AutoEncodeStrings = True
@@ -16,7 +16,7 @@ object DataModule1: TDataModule1
     AfterConnect = ConBibliotecaAfterConnect
     Port = 0
     Database = 'C:\Users\Aluno\Documents\123\Projeto biblioteca3\BibliotecaDB\BibliotecaDB.db'
-    Protocol = 'sqlite'
+    Protocol = 'sqlite-3'
     Left = 24
     Top = 8
   end
@@ -532,6 +532,88 @@ object DataModule1: TDataModule1
       item
         DataType = ftUnknown
         Name = 'OLD_usu_codigo'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryEmprestimo: TZQuery
+    Connection = ConBiblioteca
+    UpdateObject = qryUpdateEmprestimo
+    Active = True
+    SQL.Strings = (
+      'select * from emprestimo'
+    )
+    Params = <>
+    Left = 104
+    Top = 368
+  end
+  object qryUpdateEmprestimo: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM emprestimo'
+      'WHERE'
+      '  ((emprestimo.emp_codigo IS NULL AND :OLD_emp_codigo IS NULL) OR (emprestimo.emp_codigo = :OLD_emp_codigo))'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO emprestimo'
+      '  (emp_codigo, usu_codigo, obr_codigo, exe_numero, data_emprestimo, data_prevista_devolucao, '
+      '   Observacao)'
+      'VALUES'
+      '  (:emp_codigo, :usu_codigo, :obr_codigo, :exe_numero, :data_emprestimo, '
+      '   :data_prevista_devolucao, :Observacao)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE emprestimo SET'
+      '  emp_codigo = :emp_codigo,'
+      '  usu_codigo = :usu_codigo,'
+      '  obr_codigo = :obr_codigo,'
+      '  exe_numero = :exe_numero,'
+      '  data_emprestimo = :data_emprestimo,'
+      '  data_prevista_devolucao = :data_prevista_devolucao,'
+      '  Observacao = :Observacao'
+      'WHERE'
+      '  ((emprestimo.emp_codigo IS NULL AND :OLD_emp_codigo IS NULL) OR (emprestimo.emp_codigo = :OLD_emp_codigo))'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    Left = 184
+    Top = 368
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'emp_codigo'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'usu_codigo'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'obr_codigo'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'exe_numero'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'data_emprestimo'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'data_prevista_devolucao'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'Observacao'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_emp_codigo'
         ParamType = ptUnknown
       end>
   end

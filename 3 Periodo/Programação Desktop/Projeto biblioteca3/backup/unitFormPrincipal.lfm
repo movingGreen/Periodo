@@ -1,7 +1,7 @@
 object formPrincipal: TformPrincipal
-  Left = 689
+  Left = 789
   Height = 183
-  Top = 120
+  Top = 225
   Width = 395
   Caption = 'Sistema Gerenciador de Bibliotecas'
   Menu = MainMenu1

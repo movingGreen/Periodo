@@ -1,11 +1,11 @@
 object frmObra: TfrmObra
-  Left = 1214
-  Height = 724
-  Top = 69
-  Width = 677
+  Left = 1152
+  Height = 617
+  Top = 150
+  Width = 653
   Caption = 'CRUD de Obra'
-  ClientHeight = 724
-  ClientWidth = 677
+  ClientHeight = 617
+  ClientWidth = 653
   OnCreate = FormCreate
   LCLVersion = '2.2.2.0'
   object PageControlObra: TPageControl
@@ -23,9 +23,9 @@ object frmObra: TfrmObra
       ClientWidth = 792
       object DBgridObra: TDBGrid
         Left = 0
-        Height = 527
+        Height = 584
         Top = 0
-        Width = 621
+        Width = 648
         Color = clWindow
         Columns = <>
         DataSource = dataSourceObra
@@ -40,7 +40,7 @@ object frmObra: TfrmObra
       ClientWidth = 792
       OnContextPopup = tabEditarContextPopup
       object labelTitulo: TLabel
-        Left = 36
+        Left = 272
         Height = 15
         Top = 28
         Width = 30
@@ -48,7 +48,7 @@ object frmObra: TfrmObra
         ParentColor = False
       end
       object DBeditTitulo: TDBEdit
-        Left = 36
+        Left = 272
         Height = 23
         Top = 56
         Width = 80
@@ -67,13 +67,14 @@ object frmObra: TfrmObra
         MaxLength = 1
         TabOrder = 1
       end
-      object labelEditoraCodigo: TLabel
-        Left = 256
+      object labelEditora: TLabel
+        Left = 32
         Height = 15
-        Top = 28
-        Width = 95
-        Caption = 'Codigo da Editora'
+        Top = 104
+        Width = 37
+        Caption = 'Editora'
         ParentColor = False
+        OnClick = labelEditoraClick
       end
       object labelTipoObra: TLabel
         Left = 152
@@ -101,10 +102,10 @@ object frmObra: TfrmObra
         Options = []
         TabOrder = 2
       end
-      object DBLookupComboBox1: TDBLookupComboBox
-        Left = 256
+      object DBlookUpComboBoxEditora: TDBLookupComboBox
+        Left = 32
         Height = 23
-        Top = 56
+        Top = 132
         Width = 128
         DataField = 'edt_codigo'
         DataSource = dataSourceObra
@@ -116,7 +117,7 @@ object frmObra: TfrmObra
         TabOrder = 3
       end
       object PageControlObraExternas: TPageControl
-        Left = 0
+        Left = 1
         Height = 336
         Top = 248
         Width = 648
@@ -132,11 +133,30 @@ object frmObra: TfrmObra
             Left = 0
             Height = 255
             Top = 0
-            Width = 616
+            Width = 640
             Color = clWindow
             Columns = <>
             DataSource = dataSourceObraExemplar
+            Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgAutoSizeColumns]
             TabOrder = 0
+          end
+          object DBNavigatorObraExemplar: TDBNavigator
+            Left = 0
+            Height = 40
+            Top = 264
+            Width = 312
+            BevelOuter = bvNone
+            ChildSizing.EnlargeHorizontal = crsScaleChilds
+            ChildSizing.EnlargeVertical = crsScaleChilds
+            ChildSizing.ShrinkHorizontal = crsScaleChilds
+            ChildSizing.ShrinkVertical = crsScaleChilds
+            ChildSizing.Layout = cclLeftToRightThenTopToBottom
+            ChildSizing.ControlsPerLine = 100
+            ClientHeight = 40
+            ClientWidth = 312
+            DataSource = dataSourceObraExemplar
+            Options = []
+            TabOrder = 1
           end
         end
         object tabObraAutor: TTabSheet
@@ -147,11 +167,30 @@ object frmObra: TfrmObra
             Left = 0
             Height = 255
             Top = 0
-            Width = 616
+            Width = 640
             Color = clWindow
             Columns = <>
             DataSource = dataSourceObraAutor
+            Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgAutoSizeColumns]
             TabOrder = 0
+          end
+          object DBNavigatorObraAutor: TDBNavigator
+            Left = 0
+            Height = 40
+            Top = 264
+            Width = 312
+            BevelOuter = bvNone
+            ChildSizing.EnlargeHorizontal = crsScaleChilds
+            ChildSizing.EnlargeVertical = crsScaleChilds
+            ChildSizing.ShrinkHorizontal = crsScaleChilds
+            ChildSizing.ShrinkVertical = crsScaleChilds
+            ChildSizing.Layout = cclLeftToRightThenTopToBottom
+            ChildSizing.ControlsPerLine = 100
+            ClientHeight = 40
+            ClientWidth = 312
+            DataSource = dataSourceObraAutor
+            Options = []
+            TabOrder = 1
           end
         end
         object tabObraAssunto: TTabSheet
@@ -160,12 +199,13 @@ object frmObra: TfrmObra
           ClientWidth = 640
           object DBGridObraAssunto: TDBGrid
             Left = 0
-            Height = 240
+            Height = 256
             Top = 0
-            Width = 616
+            Width = 640
             Color = clWindow
             Columns = <>
             DataSource = dataSourceObraAssunto
+            Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgAutoSizeColumns]
             TabOrder = 0
           end
           object DBNavigatorObraAssunto: TDBNavigator
@@ -189,18 +229,18 @@ object frmObra: TfrmObra
         end
       end
       object labelObraCodigo: TLabel
-        Left = 36
+        Left = 32
         Height = 15
-        Top = 90
+        Top = 28
         Width = 84
         Caption = 'Codigo da Obra'
         ParentColor = False
         OnClick = labelObraCodigoClick
       end
       object DBeditObraCodigo: TDBEdit
-        Left = 36
+        Left = 32
         Height = 23
-        Top = 118
+        Top = 56
         Width = 80
         DataField = 'obr_codigo'
         DataSource = dataSourceObra
@@ -249,6 +289,9 @@ object frmObra: TfrmObra
         ParamType = ptUnknown
       end>
     DataSource = dataSourceObra
+    MasterFields = 'obr_codigo'
+    MasterSource = dataSourceObra
+    LinkedFields = 'obr_codigo'
     Left = 560
     Top = 312
     ParamData = <    
@@ -330,6 +373,9 @@ object frmObra: TfrmObra
         ParamType = ptUnknown
       end>
     DataSource = dataSourceObra
+    MasterFields = 'obr_codigo'
+    MasterSource = dataSourceObra
+    LinkedFields = 'obr_codigo'
     Left = 560
     Top = 432
     ParamData = <    
@@ -429,6 +475,9 @@ object frmObra: TfrmObra
         ParamType = ptUnknown
       end>
     DataSource = dataSourceObra
+    MasterFields = 'obr_codigo'
+    MasterSource = dataSourceObra
+    LinkedFields = 'obr_codigo'
     Left = 480
     Top = 312
     ParamData = <    

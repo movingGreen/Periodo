@@ -1,7 +1,7 @@
 object frmEmprestimo: TfrmEmprestimo
-  Left = 864
+  Left = 685
   Height = 574
-  Top = 80
+  Top = 223
   Width = 796
   Caption = 'frmEmprestimo'
   ClientHeight = 574
@@ -113,6 +113,8 @@ object frmEmprestimo: TfrmEmprestimo
             Color = clWindow
             Columns = <>
             DataSource = dataSourceUsuario
+            Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgAutoSizeColumns]
+            ReadOnly = True
             TabOrder = 0
           end
         end
@@ -128,6 +130,8 @@ object frmEmprestimo: TfrmEmprestimo
             Color = clWindow
             Columns = <>
             DataSource = dataSourceObra
+            Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgAutoSizeColumns]
+            ReadOnly = True
             TabOrder = 0
           end
         end
@@ -143,6 +147,8 @@ object frmEmprestimo: TfrmEmprestimo
             Color = clWindow
             Columns = <>
             DataSource = dataSourceEmprestimoExemplar
+            Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgAutoSizeColumns]
+            ReadOnly = True
             TabOrder = 0
           end
         end
@@ -158,21 +164,11 @@ object frmEmprestimo: TfrmEmprestimo
         MaxLength = 0
         TabOrder = 1
       end
-      object DBeditObservacao: TDBEdit
-        Left = 8
-        Height = 23
-        Top = 408
-        Width = 184
-        DataField = 'Observacao'
-        DataSource = dataSourceEmprestimo
-        MaxLength = 0
-        TabOrder = 2
-      end
       object DBnavigatorEmprestimo: TDBNavigator
         Left = 224
-        Height = 28
-        Top = 88
-        Width = 281
+        Height = 36
+        Top = 80
+        Width = 320
         BevelOuter = bvNone
         ChildSizing.EnlargeHorizontal = crsScaleChilds
         ChildSizing.EnlargeVertical = crsScaleChilds
@@ -180,11 +176,11 @@ object frmEmprestimo: TfrmEmprestimo
         ChildSizing.ShrinkVertical = crsScaleChilds
         ChildSizing.Layout = cclLeftToRightThenTopToBottom
         ChildSizing.ControlsPerLine = 100
-        ClientHeight = 28
-        ClientWidth = 281
+        ClientHeight = 36
+        ClientWidth = 320
         DataSource = dataSourceEmprestimo
         Options = []
-        TabOrder = 3
+        TabOrder = 2
       end
       object DBlookUpComboBoxObra: TDBLookupComboBox
         Left = 8
@@ -198,7 +194,7 @@ object frmEmprestimo: TfrmEmprestimo
         ListFieldIndex = 0
         ListSource = dataSourceObra
         LookupCache = False
-        TabOrder = 4
+        TabOrder = 3
       end
       object DBlookUpComboBoxExemplar: TDBLookupComboBox
         Left = 8
@@ -211,7 +207,8 @@ object frmEmprestimo: TfrmEmprestimo
         ListFieldIndex = 0
         ListSource = dataSourceExemplar
         LookupCache = False
-        TabOrder = 5
+        OnChange = DBlookUpComboBoxExemplarChange
+        TabOrder = 4
       end
       object DBlookUpComboBoxUsuario: TDBLookupComboBox
         Left = 224
@@ -225,7 +222,7 @@ object frmEmprestimo: TfrmEmprestimo
         ListFieldIndex = 0
         ListSource = dataSourceUsuario
         LookupCache = False
-        TabOrder = 6
+        TabOrder = 5
       end
       object DBdateEditEmprestimo: TDBDateEdit
         Left = 8
@@ -237,7 +234,7 @@ object frmEmprestimo: TfrmEmprestimo
         ButtonWidth = 23
         NumGlyphs = 1
         MaxLength = 0
-        TabOrder = 7
+        TabOrder = 6
         DataField = 'data_emprestimo'
         DataSource = dataSourceEmprestimo
       end
@@ -251,18 +248,18 @@ object frmEmprestimo: TfrmEmprestimo
         ButtonWidth = 23
         NumGlyphs = 1
         MaxLength = 0
-        TabOrder = 8
+        TabOrder = 7
         DataField = 'data_prevista_devolucao'
         DataSource = dataSourceEmprestimo
       end
-      object DBmemo: TDBMemo
+      object DBmemoObservacao: TDBMemo
         Left = 8
         Height = 90
-        Top = 448
+        Top = 408
         Width = 150
         DataField = 'Observacao'
         DataSource = dataSourceEmprestimo
-        TabOrder = 9
+        TabOrder = 8
       end
     end
   end
@@ -301,7 +298,7 @@ object frmEmprestimo: TfrmEmprestimo
         Name = 'obr_codigo'
         ParamType = ptUnknown
       end>
-    DataSource = dataSourceEmprestimoExemplar
+    DataSource = dataSourceObra
     Left = 730
     Top = 184
     ParamData = <    

@@ -1,11 +1,11 @@
 object frmAssunto: TfrmAssunto
-  Left = 1309
-  Height = 317
-  Top = 635
-  Width = 362
+  Left = 1277
+  Height = 313
+  Top = 503
+  Width = 354
   Caption = 'frmAssunto'
-  ClientHeight = 317
-  ClientWidth = 362
+  ClientHeight = 313
+  ClientWidth = 354
   LCLVersion = '2.2.2.0'
   object PageControlAssunto: TPageControl
     Left = 8
@@ -27,6 +27,7 @@ object frmAssunto: TfrmAssunto
         Color = clWindow
         Columns = <>
         DataSource = DataSourceAssunto
+        Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgAutoSizeColumns]
         TabOrder = 0
       end
     end
@@ -34,8 +35,9 @@ object frmAssunto: TfrmAssunto
       Caption = 'Editar'
       ClientHeight = 276
       ClientWidth = 336
+      OnContextPopup = tabEditarContextPopup
       object labelDescricao: TLabel
-        Left = 36
+        Left = 170
         Height = 15
         Top = 56
         Width = 51
@@ -43,10 +45,10 @@ object frmAssunto: TfrmAssunto
         ParentColor = False
       end
       object DBEditDescricao: TDBEdit
-        Left = 36
+        Left = 170
         Height = 23
         Top = 88
-        Width = 80
+        Width = 107
         DataField = 'descricao'
         DataSource = DataSourceAssunto
         MaxLength = 50
@@ -69,6 +71,25 @@ object frmAssunto: TfrmAssunto
         DataSource = DataSourceAssunto
         Options = []
         TabOrder = 1
+      end
+      object labelCodigoAssunto: TLabel
+        Left = 36
+        Height = 15
+        Top = 56
+        Width = 102
+        Caption = 'Codigo do Assunto'
+        ParentColor = False
+      end
+      object DBeditCodigoDescricao: TDBEdit
+        Left = 36
+        Height = 23
+        Top = 88
+        Width = 60
+        DataField = 'ass_codigo'
+        DataSource = DataSourceAssunto
+        Alignment = taRightJustify
+        MaxLength = 0
+        TabOrder = 2
       end
     end
   end

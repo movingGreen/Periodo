@@ -47,6 +47,7 @@ type
     qryEmprestimoExemplar: TZQuery;
     qryUpdateEmprestimoExemplar: TZUpdateSQL;
     procedure dataSourceExemplarDataChange(Sender: TObject; Field: TField);
+    procedure DBlookUpComboBoxExemplarChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure labelCodigoEmprestimoClick(Sender: TObject);
   private
@@ -71,6 +72,11 @@ end;
 
 procedure TfrmEmprestimo.dataSourceExemplarDataChange(Sender: TObject;
   Field: TField);
+begin
+
+end;
+
+procedure TfrmEmprestimo.DBlookUpComboBoxExemplarChange(Sender: TObject);
 begin
 
 end;
