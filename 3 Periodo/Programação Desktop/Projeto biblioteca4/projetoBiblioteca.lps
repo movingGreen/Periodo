@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="projetoBiblioteca.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="6"/>
+        <CursorPos X="71"/>
+        <UsageCount Value="166"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitdatamodule.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DataModule1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="unitDataModule"/>
+        <TopLine Value="55"/>
+        <CursorPos X="3" Y="75"/>
+        <UsageCount Value="166"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitFormPrincipal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="formPrincipal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="91"/>
+        <CursorPos X="35" Y="118"/>
+        <UsageCount Value="166"/>
+      </Unit>
+      <Unit>
+        <Filename Value="untfrmautor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmAutor"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="untfrmAutor"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="24"/>
+        <CursorPos X="12" Y="53"/>
+        <UsageCount Value="166"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="untfrmobra.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmObra"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="85"/>
+        <CursorPos X="3" Y="87"/>
+        <UsageCount Value="165"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="untfrmeditora.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmEditora"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="10"/>
+        <CursorPos X="9" Y="39"/>
+        <UsageCount Value="154"/>
+      </Unit>
+      <Unit>
+        <Filename Value="untfrmassunto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmAssunto"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="12"/>
+        <CursorPos X="3" Y="46"/>
+        <UsageCount Value="152"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="untfrmusuario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmUsuario"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="31" Y="4"/>
+        <UsageCount Value="151"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmEmprestimo"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="132"/>
+        <CursorPos X="5" Y="157"/>
+        <UsageCount Value="136"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitprincipal.pas"/>
+        <ComponentName Value="formPrincipal"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="unitFormPrincipal"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="23"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\AppData\Local\lazarus\onlinepackagemanager\packages\zeosdbo\src\dbc\ZDbcSqLiteUtils.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="227"/>
+        <CursorPos Y="239"/>
+        <UsageCount Value="5"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unitfrmeditora.pas"/>
+        <ComponentName Value="frmEditora"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="untfrmobra.lfm"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="31"/>
+        <UsageCount Value="2"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="73" Column="3" TopLine="50"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="72" Column="3" TopLine="46"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="73" Column="3" TopLine="47"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="76" Column="3" TopLine="50"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="87" Column="3" TopLine="75"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="57" TopLine="51"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="58" TopLine="52"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="59" TopLine="53"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="60" TopLine="54"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="61" TopLine="55"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="62" TopLine="56"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="63" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="64" TopLine="58"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="65" TopLine="59"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="66" TopLine="60"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="67" TopLine="61"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="68" TopLine="62"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="69" TopLine="63"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="70" TopLine="64"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="71" TopLine="65"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="72" TopLine="66"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="73" TopLine="67"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="75" TopLine="69"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="113" Column="18" TopLine="90"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="108" Column="35" TopLine="92"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="106" Column="95" TopLine="94"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="108" Column="38" TopLine="96"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="110" Column="43" TopLine="104"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="118" Column="29" TopLine="103"/>
+      </Position>
+      <Position>
+        <Filename Value="untfrmemprestimo.pas"/>
+        <Caret Line="149" Column="52" TopLine="129"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+    <HistoryLists>
+      <List Name="LaunchingApplication" Type="File" Count="1">
+        <Item1 Value="C:\WINDOWS\system32\cmd.exe /C ${TargetCmdLine}"/>
+      </List>
+      <List Name="WorkingDirectory" Type="File" Count="1"/>
+      <List Name="CommandLineParameters" Count="1"/>
+    </HistoryLists>
+  </ProjectSession>
+</CONFIG>

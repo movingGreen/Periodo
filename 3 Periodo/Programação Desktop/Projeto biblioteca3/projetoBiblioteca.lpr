@@ -21,7 +21,6 @@ begin
   Application.Initialize;
   Application.CreateForm(TDataModule1, DataModule1);
   Application.CreateForm(TformPrincipal, formPrincipal);
-  Application.CreateForm(TfrmEmprestimo, frmEmprestimo);
   Application.Run;
 end.
 

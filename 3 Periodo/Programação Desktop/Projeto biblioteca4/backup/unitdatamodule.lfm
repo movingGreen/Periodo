@@ -1,0 +1,533 @@
+object DataModule1: TDataModule1
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  Height = 473
+  HorizontalOffset = 934
+  VerticalOffset = 116
+  Width = 255
+  object ConBiblioteca: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Properties.Strings = (
+      'AutoEncodeStrings=True'
+      'controls_cp=CP_UTF8'
+    )
+    Connected = True
+    AfterConnect = ConBibliotecaAfterConnect
+    Port = 0
+    Database = 'C:\Users\el_va\OneDrive\Documentos\Técnologo Sistema para Internet - IFMT\Periodo\3 Periodo\Programação Desktop\Projeto biblioteca3\BibliotecaDB\BibliotecaDB.db'
+    Protocol = 'sqlite-3'
+    Left = 24
+    Top = 8
+  end
+  object qryObra: TZQuery
+    Connection = ConBiblioteca
+    UpdateObject = qryUpdateObra
+    SQL.Strings = (
+      'select * from obra'
+    )
+    Params = <>
+    Left = 104
+    Top = 8
+    object qryObraobr_codigo: TLargeintField
+      FieldKind = fkData
+      FieldName = 'obr_codigo'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryObratitulo: TStringField
+      FieldKind = fkData
+      FieldName = 'titulo'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 50
+    end
+    object qryObratipo_obra: TStringField
+      FieldKind = fkData
+      FieldName = 'tipo_obra'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 1
+    end
+    object qryObraedt_codigo: TLargeintField
+      FieldKind = fkData
+      FieldName = 'edt_codigo'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+  end
+  object qryUpdateObra: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM obra'
+      'WHERE'
+      '  ((obra.obr_codigo IS NULL AND :OLD_obr_codigo IS NULL) OR (obra.obr_codigo = :OLD_obr_codigo))'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO obra'
+      '  (obr_codigo, titulo, tipo_obra, edt_codigo)'
+      'VALUES'
+      '  (:obr_codigo, :titulo, :tipo_obra, :edt_codigo)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE obra SET'
+      '  obr_codigo = :obr_codigo,'
+      '  titulo = :titulo,'
+      '  tipo_obra = :tipo_obra,'
+      '  edt_codigo = :edt_codigo'
+      'WHERE'
+      '  ((obra.obr_codigo IS NULL AND :OLD_obr_codigo IS NULL) OR (obra.obr_codigo = :OLD_obr_codigo))'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    Left = 184
+    Top = 8
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'obr_codigo'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'titulo'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'tipo_obra'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'edt_codigo'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_obr_codigo'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryAutor: TZQuery
+    Connection = ConBiblioteca
+    UpdateObject = qryUpdateAutor
+    SQL.Strings = (
+      'select * from autor'
+    )
+    Params = <>
+    Left = 104
+    Top = 80
+    object qryAutoraut_codigo: TLargeintField
+      FieldKind = fkData
+      FieldName = 'aut_codigo'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryAutornome: TStringField
+      FieldKind = fkData
+      FieldName = 'nome'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 50
+    end
+  end
+  object qryUpdateAutor: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM autor'
+      'WHERE'
+      '  ((autor.aut_codigo IS NULL AND :OLD_aut_codigo IS NULL) OR (autor.aut_codigo = :OLD_aut_codigo))'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO autor'
+      '  (aut_codigo, nome)'
+      'VALUES'
+      '  (:aut_codigo, :nome)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE autor SET'
+      '  aut_codigo = :aut_codigo,'
+      '  nome = :nome'
+      'WHERE'
+      '  ((autor.aut_codigo IS NULL AND :OLD_aut_codigo IS NULL) OR (autor.aut_codigo = :OLD_aut_codigo))'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    Left = 184
+    Top = 80
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'aut_codigo'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'nome'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_aut_codigo'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryEditora: TZQuery
+    Connection = ConBiblioteca
+    UpdateObject = qryUpdateEditora
+    SQL.Strings = (
+      'select * from editora'
+    )
+    Params = <>
+    Left = 104
+    Top = 152
+    object qryEditoraedt_codigo: TLargeintField
+      FieldKind = fkData
+      FieldName = 'edt_codigo'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryEditoranome: TStringField
+      FieldKind = fkData
+      FieldName = 'nome'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 50
+    end
+  end
+  object qryUpdateEditora: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM editora'
+      'WHERE'
+      '  ((editora.edt_codigo IS NULL AND :OLD_edt_codigo IS NULL) OR (editora.edt_codigo = :OLD_edt_codigo))'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO editora'
+      '  (edt_codigo, nome)'
+      'VALUES'
+      '  (:edt_codigo, :nome)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE editora SET'
+      '  edt_codigo = :edt_codigo,'
+      '  nome = :nome'
+      'WHERE'
+      '  ((editora.edt_codigo IS NULL AND :OLD_edt_codigo IS NULL) OR (editora.edt_codigo = :OLD_edt_codigo))'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    Left = 184
+    Top = 152
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'edt_codigo'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'nome'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_edt_codigo'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryAssunto: TZQuery
+    Connection = ConBiblioteca
+    UpdateObject = qryUpdateAssunto
+    SQL.Strings = (
+      'select * from assunto'
+    )
+    Params = <>
+    Left = 104
+    Top = 224
+    object qryAssuntoass_codigo: TLargeintField
+      FieldKind = fkData
+      FieldName = 'ass_codigo'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryAssuntodescricao: TStringField
+      FieldKind = fkData
+      FieldName = 'descricao'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 50
+    end
+  end
+  object qryUpdateAssunto: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM assunto'
+      'WHERE'
+      '  ((assunto.ass_codigo IS NULL AND :OLD_ass_codigo IS NULL) OR (assunto.ass_codigo = :OLD_ass_codigo))'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO assunto'
+      '  (ass_codigo, descricao)'
+      'VALUES'
+      '  (:ass_codigo, :descricao)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE assunto SET'
+      '  ass_codigo = :ass_codigo,'
+      '  descricao = :descricao'
+      'WHERE'
+      '  ((assunto.ass_codigo IS NULL AND :OLD_ass_codigo IS NULL) OR (assunto.ass_codigo = :OLD_ass_codigo))'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    Left = 184
+    Top = 224
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'ass_codigo'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'descricao'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_ass_codigo'
+        ParamType = ptUnknown
+      end>
+  end
+  object qryUsuario: TZQuery
+    Connection = ConBiblioteca
+    UpdateObject = qryUpdateUsuario
+    SQL.Strings = (
+      'select * from usuario'
+    )
+    Params = <>
+    Left = 104
+    Top = 296
+    object qryUsuariousu_codigo: TLargeintField
+      FieldKind = fkData
+      FieldName = 'usu_codigo'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryUsuarionome: TStringField
+      FieldKind = fkData
+      FieldName = 'nome'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 50
+    end
+    object qryUsuariologradouro: TStringField
+      FieldKind = fkData
+      FieldName = 'logradouro'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object qryUsuarionumero: TStringField
+      FieldKind = fkData
+      FieldName = 'numero'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 6
+    end
+    object qryUsuariocomplemento: TStringField
+      FieldKind = fkData
+      FieldName = 'complemento'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object qryUsuariobairro: TStringField
+      FieldKind = fkData
+      FieldName = 'bairro'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object qryUsuariocidade: TStringField
+      FieldKind = fkData
+      FieldName = 'cidade'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object qryUsuariouf: TStringField
+      FieldKind = fkData
+      FieldName = 'uf'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 2
+    end
+    object qryUsuariocep: TStringField
+      FieldKind = fkData
+      FieldName = 'cep'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 8
+    end
+    object qryUsuariotelefone: TStringField
+      FieldKind = fkData
+      FieldName = 'telefone'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryUsuariocpf: TStringField
+      FieldKind = fkData
+      FieldName = 'cpf'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 11
+    end
+  end
+  object qryUpdateUsuario: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM usuario'
+      'WHERE'
+      '  ((usuario.usu_codigo IS NULL AND :OLD_usu_codigo IS NULL) OR (usuario.usu_codigo = :OLD_usu_codigo))'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO usuario'
+      '  (nome, logradouro, numero, complemento, bairro, cidade, uf, cep, telefone, '
+      '   cpf)'
+      'VALUES'
+      '  (:nome, :logradouro, :numero, :complemento, :bairro, :cidade, :uf, :cep, '
+      '   :telefone, :cpf)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE usuario SET'
+      '  nome = :nome,'
+      '  logradouro = :logradouro,'
+      '  numero = :numero,'
+      '  complemento = :complemento,'
+      '  bairro = :bairro,'
+      '  cidade = :cidade,'
+      '  uf = :uf,'
+      '  cep = :cep,'
+      '  telefone = :telefone,'
+      '  cpf = :cpf'
+      'WHERE'
+      '  ((usuario.usu_codigo IS NULL AND :OLD_usu_codigo IS NULL) OR (usuario.usu_codigo = :OLD_usu_codigo))'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    Left = 184
+    Top = 296
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'nome'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'logradouro'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'numero'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'complemento'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'bairro'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'cidade'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'uf'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'cep'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'telefone'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'cpf'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_usu_codigo'
+        ParamType = ptUnknown
+      end>
+  end
+end

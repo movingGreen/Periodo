@@ -1,0 +1,440 @@
+object frmEmprestimo: TfrmEmprestimo
+  Left = 655
+  Height = 704
+  Top = 6
+  Width = 894
+  Caption = 'frmEmprestimo'
+  ClientHeight = 704
+  ClientWidth = 894
+  OnCreate = FormCreate
+  LCLVersion = '2.2.2.0'
+  object pageControlEmprestimo: TPageControl
+    Left = 0
+    Height = 818
+    Top = 0
+    Width = 1085
+    ActivePage = tabEmprestimo
+    TabIndex = 1
+    TabOrder = 0
+    object tabConsulta: TTabSheet
+      Caption = 'Consulta'
+      ClientHeight = 790
+      ClientWidth = 1077
+      object DBGridEmprestimo: TDBGrid
+        Left = 0
+        Height = 682
+        Top = 0
+        Width = 888
+        Color = clWindow
+        Columns = <>
+        DataSource = dataSourceEmprestimo
+        Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgAutoSizeColumns]
+        ReadOnly = True
+        TabOrder = 0
+      end
+    end
+    object tabEmprestimo: TTabSheet
+      Caption = 'Emprestimo'
+      ClientHeight = 790
+      ClientWidth = 1077
+      OnContextPopup = tabEmprestimoContextPopup
+      object labelDataDevolucao: TLabel
+        Left = 224
+        Height = 15
+        Top = 112
+        Width = 99
+        Caption = 'Data de Devolução'
+        ParentColor = False
+      end
+      object labelDataEmprestimo: TLabel
+        Left = 8
+        Height = 15
+        Top = 112
+        Width = 108
+        Caption = 'Data do Emprestimo'
+        ParentColor = False
+      end
+      object labelExemplar: TLabel
+        Left = 720
+        Height = 15
+        Top = 16
+        Width = 49
+        Caption = 'Exemplar'
+        ParentColor = False
+        OnClick = labelCodigoEmprestimoClick
+      end
+      object labelObra: TLabel
+        Left = 456
+        Height = 15
+        Top = 16
+        Width = 26
+        Caption = 'Obra'
+        ParentColor = False
+      end
+      object labelUsuario: TLabel
+        Left = 224
+        Height = 15
+        Top = 16
+        Width = 43
+        Caption = 'Usuário '
+        ParentColor = False
+      end
+      object labelCodigoEmprestimo: TLabel
+        Left = 8
+        Height = 15
+        Top = 16
+        Width = 123
+        Caption = 'Codigo do Emprestimo'
+        ParentColor = False
+        OnClick = labelCodigoEmprestimoClick
+      end
+      object labelObservacao: TLabel
+        Left = 544
+        Height = 15
+        Top = 112
+        Width = 62
+        Caption = 'Observação'
+        ParentColor = False
+      end
+      object pageControlUsuarioObra: TPageControl
+        Left = -4
+        Height = 392
+        Top = 288
+        Width = 894
+        ActivePage = tabObra
+        TabIndex = 1
+        TabOrder = 0
+        object tabUsuario: TTabSheet
+          Caption = 'Usuario'
+          ClientHeight = 364
+          ClientWidth = 886
+          object DBGridEmprestimoUsuario: TDBGrid
+            Left = 0
+            Height = 288
+            Top = 80
+            Width = 888
+            Color = clWindow
+            Columns = <>
+            DataSource = dataSourceEmprestimoUsuario
+            Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgAutoSizeColumns]
+            ReadOnly = True
+            TabOrder = 0
+          end
+          object labelCodigoUsuario: TLabel
+            Left = 40
+            Height = 15
+            Top = 16
+            Width = 39
+            Caption = 'Codigo'
+            ParentColor = False
+          end
+          object labelNomeUsuario: TLabel
+            Left = 192
+            Height = 15
+            Top = 16
+            Width = 33
+            Caption = 'Nome'
+            ParentColor = False
+          end
+          object editCodigoUsuario: TEdit
+            Left = 40
+            Height = 23
+            Top = 40
+            Width = 80
+            NumbersOnly = True
+            TabOrder = 1
+          end
+          object editNomeUsuario: TEdit
+            Left = 192
+            Height = 23
+            Top = 40
+            Width = 232
+            TabOrder = 2
+          end
+          object btPesquisarUsuario: TButton
+            Left = 512
+            Height = 25
+            Top = 38
+            Width = 75
+            Caption = 'Pesquisar'
+            OnClick = btPesquisarUsuarioClick
+            TabOrder = 3
+          end
+        end
+        object tabObra: TTabSheet
+          Caption = 'Obra'
+          ClientHeight = 364
+          ClientWidth = 886
+          object DBGridEmprestimoObra: TDBGrid
+            Left = 0
+            Height = 288
+            Top = 80
+            Width = 888
+            Color = clWindow
+            Columns = <>
+            DataSource = dataSourceEmprestimoObra
+            Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgAutoSizeColumns]
+            ReadOnly = True
+            TabOrder = 0
+          end
+          object labelCodigoObra: TLabel
+            Left = 40
+            Height = 15
+            Top = 16
+            Width = 39
+            Caption = 'Código'
+            ParentColor = False
+          end
+          object labelTituloObra: TLabel
+            Left = 184
+            Height = 15
+            Top = 16
+            Width = 30
+            Caption = 'Título'
+            ParentColor = False
+          end
+          object labelTipoObra: TLabel
+            Left = 400
+            Height = 15
+            Top = 16
+            Width = 68
+            Caption = 'Tipo da Obra'
+            ParentColor = False
+          end
+          object editCodigoObra: TEdit
+            Left = 40
+            Height = 23
+            Top = 40
+            Width = 80
+            TabOrder = 1
+          end
+          object editTituloObra: TEdit
+            Left = 184
+            Height = 23
+            Top = 40
+            Width = 152
+            TabOrder = 2
+          end
+          object editTipoObra: TEdit
+            Left = 400
+            Height = 23
+            Top = 40
+            Width = 80
+            TabOrder = 3
+          end
+          object btPesquisarObra: TButton
+            Left = 552
+            Height = 25
+            Top = 38
+            Width = 75
+            Caption = 'Pesquisar'
+            OnClick = btPesquisarObraClick
+            TabOrder = 4
+          end
+        end
+      end
+      object DBeditCodigoEmprestimo: TDBEdit
+        Left = 8
+        Height = 23
+        Top = 48
+        Width = 120
+        DataField = 'emp_codigo'
+        ReadOnly = True
+        Alignment = taRightJustify
+        MaxLength = 0
+        TabOrder = 1
+      end
+      object DBnavigatorEmprestimo: TDBNavigator
+        Left = 232
+        Height = 36
+        Top = 248
+        Width = 408
+        BevelOuter = bvNone
+        ChildSizing.EnlargeHorizontal = crsScaleChilds
+        ChildSizing.EnlargeVertical = crsScaleChilds
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 100
+        ClientHeight = 36
+        ClientWidth = 408
+        DataSource = dataSourceEmprestimo
+        Options = []
+        TabOrder = 2
+      end
+      object DBEditUsuario: TDBEdit
+        Left = 224
+        Height = 23
+        Top = 48
+        Width = 168
+        DataField = 'usu_codigo'
+        DataSource = dataSourceEmprestimo
+        Alignment = taRightJustify
+        MaxLength = 0
+        TabOrder = 6
+      end
+      object DBEditObra: TDBEdit
+        Left = 456
+        Height = 23
+        Top = 48
+        Width = 192
+        DataField = 'obr_codigo'
+        DataSource = dataSourceEmprestimo
+        Alignment = taRightJustify
+        MaxLength = 0
+        TabOrder = 7
+      end
+      object DBEditExemplar: TDBEdit
+        Left = 720
+        Height = 23
+        Top = 48
+        Width = 120
+        DataField = 'exe_numero'
+        DataSource = dataSourceEmprestimo
+        Alignment = taRightJustify
+        MaxLength = 0
+        TabOrder = 8
+      end
+      object DBdateEditEmprestimo: TDBDateEdit
+        Left = 8
+        Height = 23
+        Top = 144
+        Width = 176
+        CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+        DateOrder = doNone
+        ButtonWidth = 23
+        NumGlyphs = 1
+        MaxLength = 0
+        TabOrder = 3
+        DataField = 'data_emprestimo'
+        DataSource = dataSourceEmprestimo
+      end
+      object DBdateEditDataDevolucao: TDBDateEdit
+        Left = 224
+        Height = 23
+        Top = 144
+        Width = 176
+        CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+        DateOrder = doNone
+        ButtonWidth = 23
+        NumGlyphs = 1
+        MaxLength = 0
+        TabOrder = 4
+        DataField = 'data_prevista_devolucao'
+        DataSource = dataSourceEmprestimo
+      end
+      object DBmemoObservacao: TDBMemo
+        Left = 544
+        Height = 90
+        Top = 144
+        Width = 296
+        DataField = 'Observacao'
+        DataSource = dataSourceEmprestimo
+        TabOrder = 5
+      end
+    end
+  end
+  object qryEmprestimo: TZQuery
+    Connection = DataModule1.ConBiblioteca
+    UpdateObject = qryUpdateEmprestimo
+    Active = True
+    SQL.Strings = (
+      'select * from emprestimo'
+    )
+    Params = <>
+    Left = 72
+    Top = 208
+  end
+  object qryUpdateEmprestimo: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM emprestimo'
+      'WHERE'
+      '  ((emprestimo.emp_codigo IS NULL AND :OLD_emp_codigo IS NULL) OR (emprestimo.emp_codigo = :OLD_emp_codigo))'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO emprestimo'
+      '  (usu_codigo, obr_codigo, exe_numero, data_emprestimo, data_prevista_devolucao, '
+      '   Observacao)'
+      'VALUES'
+      '  (:usu_codigo, :obr_codigo, :exe_numero, :data_emprestimo, :data_prevista_devolucao, '
+      '   :Observacao)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE emprestimo SET'
+      '  usu_codigo = :usu_codigo,'
+      '  obr_codigo = :obr_codigo,'
+      '  exe_numero = :exe_numero,'
+      '  data_emprestimo = :data_emprestimo,'
+      '  data_prevista_devolucao = :data_prevista_devolucao,'
+      '  Observacao = :Observacao'
+      'WHERE'
+      '  ((emprestimo.emp_codigo IS NULL AND :OLD_emp_codigo IS NULL) OR (emprestimo.emp_codigo = :OLD_emp_codigo))'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    Left = 152
+    Top = 224
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'usu_codigo'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'obr_codigo'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'exe_numero'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'data_emprestimo'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'data_prevista_devolucao'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'Observacao'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_emp_codigo'
+        ParamType = ptUnknown
+      end>
+  end
+  object dataSourceEmprestimo: TDataSource
+    DataSet = qryEmprestimo
+    Left = 248
+    Top = 208
+  end
+  object qryEmprestimoUsuario: TZQuery
+    Connection = DataModule1.ConBiblioteca
+    Params = <>
+    Left = 464
+    Top = 120
+  end
+  object qryEmprestimoObra: TZQuery
+    Connection = DataModule1.ConBiblioteca
+    Params = <>
+    Left = 464
+    Top = 176
+  end
+  object dataSourceEmprestimoUsuario: TDataSource
+    DataSet = qryEmprestimoUsuario
+    Left = 384
+    Top = 192
+  end
+  object dataSourceEmprestimoObra: TDataSource
+    DataSet = qryEmprestimoObra
+    Left = 688
+    Top = 96
+  end
+end

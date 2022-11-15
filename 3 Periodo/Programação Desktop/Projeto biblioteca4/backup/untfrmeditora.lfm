@@ -1,0 +1,97 @@
+object frmEditora: TfrmEditora
+  Left = 1153
+  Height = 319
+  Top = 470
+  Width = 390
+  Caption = 'frmEditora'
+  ClientHeight = 319
+  ClientWidth = 390
+  OnCreate = FormCreate
+  LCLVersion = '2.2.2.0'
+  object PageControlEditora: TPageControl
+    Left = 8
+    Height = 312
+    Top = 8
+    Width = 384
+    ActivePage = TabEditar
+    TabIndex = 1
+    TabOrder = 0
+    object TabConsulta: TTabSheet
+      Caption = 'Consulta'
+      ClientHeight = 284
+      ClientWidth = 376
+      object DBGridEditora: TDBGrid
+        Left = 0
+        Height = 288
+        Top = 0
+        Width = 376
+        Color = clWindow
+        Columns = <>
+        DataSource = DataSourceEditora
+        TabOrder = 0
+      end
+    end
+    object TabEditar: TTabSheet
+      Caption = 'Editar'
+      ClientHeight = 284
+      ClientWidth = 376
+      object DBNavigatorEditora: TDBNavigator
+        Left = 32
+        Height = 33
+        Top = 128
+        Width = 256
+        BevelOuter = bvNone
+        ChildSizing.EnlargeHorizontal = crsScaleChilds
+        ChildSizing.EnlargeVertical = crsScaleChilds
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 100
+        ClientHeight = 33
+        ClientWidth = 256
+        DataSource = DataSourceEditora
+        Options = []
+        TabOrder = 0
+      end
+      object DBEditNome: TDBEdit
+        Left = 136
+        Height = 23
+        Top = 71
+        Width = 152
+        DataField = 'nome'
+        DataSource = DataSourceEditora
+        MaxLength = 50
+        TabOrder = 1
+      end
+      object labelNome: TLabel
+        Left = 136
+        Height = 15
+        Top = 40
+        Width = 33
+        Caption = 'Nome'
+        ParentColor = False
+      end
+      object DBEdit1: TDBEdit
+        Left = 32
+        Height = 23
+        Top = 72
+        Width = 56
+        MaxLength = 0
+        TabOrder = 2
+      end
+      object labelCodigoEditora: TLabel
+        Left = 32
+        Height = 15
+        Top = 40
+        Width = 95
+        Caption = 'Codigo da Editora'
+        ParentColor = False
+      end
+    end
+  end
+  object DataSourceEditora: TDataSource
+    DataSet = DataModule1.qryEditora
+    Left = 272
+    Top = 248
+  end
+end

@@ -1,0 +1,105 @@
+object frmAutor: TfrmAutor
+  Left = 309
+  Height = 348
+  Top = 122
+  Width = 486
+  Caption = 'CRUD de Autor'
+  ClientHeight = 348
+  ClientWidth = 486
+  OnCreate = FormCreate
+  LCLVersion = '2.2.2.0'
+  object PageControlAutor: TPageControl
+    Left = 8
+    Height = 336
+    Top = 8
+    Width = 480
+    ActivePage = tabEditar
+    TabIndex = 1
+    TabOrder = 0
+    object tabConsulta: TTabSheet
+      Caption = 'Consulta'
+      ClientHeight = 308
+      ClientWidth = 472
+      object DBGridAutor: TDBGrid
+        Left = 0
+        Height = 312
+        Top = 0
+        Width = 472
+        Color = clWindow
+        Columns = <>
+        DataSource = dataSourceAutor
+        Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgAutoSizeColumns]
+        ReadOnly = True
+        TabOrder = 0
+      end
+    end
+    object tabEditar: TTabSheet
+      Caption = 'Editar'
+      ClientHeight = 308
+      ClientWidth = 472
+      object labelNome: TLabel
+        Left = 165
+        Height = 15
+        Top = 64
+        Width = 33
+        Caption = 'Nome'
+        ParentColor = False
+        OnClick = labelNomeClick
+      end
+      object DBNavigatorAutor: TDBNavigator
+        Left = 36
+        Height = 25
+        Top = 136
+        Width = 241
+        BevelOuter = bvNone
+        ChildSizing.EnlargeHorizontal = crsScaleChilds
+        ChildSizing.EnlargeVertical = crsScaleChilds
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 100
+        ClientHeight = 25
+        ClientWidth = 241
+        DataSource = dataSourceAutor
+        Options = []
+        TabOrder = 0
+      end
+      object DBEditNome: TDBEdit
+        Left = 165
+        Height = 23
+        Top = 96
+        Width = 112
+        DataField = 'nome'
+        DataSource = dataSourceAutor
+        MaxLength = 50
+        TabOrder = 1
+      end
+      object labelCodigoAutor: TLabel
+        Left = 36
+        Height = 15
+        Top = 64
+        Width = 89
+        Caption = 'Codigo do Autor'
+        ParentColor = False
+      end
+      object DBeditCodigoNome: TDBEdit
+        Left = 36
+        Height = 23
+        Top = 96
+        Width = 68
+        DataField = 'aut_codigo'
+        DataSource = dataSourceAutor
+        ReadOnly = True
+        Alignment = taRightJustify
+        MaxLength = 0
+        TabOrder = 2
+      end
+    end
+  end
+  object dataSourceAutor: TDataSource
+    DataSet = DataModule1.qryAutor
+    OnDataChange = dataSourceAutorDataChange
+    Left = 48
+    Top = 296
+  end
+end

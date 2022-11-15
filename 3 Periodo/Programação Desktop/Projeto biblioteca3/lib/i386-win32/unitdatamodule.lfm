@@ -3,7 +3,7 @@ object DataModule1: TDataModule1
   OldCreateOrder = False
   Height = 473
   HorizontalOffset = 1061
-  VerticalOffset = 15
+  VerticalOffset = 92
   Width = 255
   object ConBiblioteca: TZConnection
     ControlsCodePage = cCP_UTF8
@@ -23,7 +23,6 @@ object DataModule1: TDataModule1
   object qryObra: TZQuery
     Connection = ConBiblioteca
     UpdateObject = qryUpdateObra
-    Active = True
     SQL.Strings = (
       'select * from obra'
     )
@@ -123,7 +122,6 @@ object DataModule1: TDataModule1
   object qryAutor: TZQuery
     Connection = ConBiblioteca
     UpdateObject = qryUpdateAutor
-    Active = True
     SQL.Strings = (
       'select * from autor'
     )
@@ -192,7 +190,6 @@ object DataModule1: TDataModule1
   object qryEditora: TZQuery
     Connection = ConBiblioteca
     UpdateObject = qryUpdateEditora
-    Active = True
     SQL.Strings = (
       'select * from editora'
     )
@@ -261,7 +258,6 @@ object DataModule1: TDataModule1
   object qryAssunto: TZQuery
     Connection = ConBiblioteca
     UpdateObject = qryUpdateAssunto
-    Active = True
     SQL.Strings = (
       'select * from assunto'
     )
@@ -330,7 +326,6 @@ object DataModule1: TDataModule1
   object qryUsuario: TZQuery
     Connection = ConBiblioteca
     UpdateObject = qryUpdateUsuario
-    Active = True
     SQL.Strings = (
       'select * from usuario'
     )
@@ -538,7 +533,6 @@ object DataModule1: TDataModule1
   object qryEmprestimo: TZQuery
     Connection = ConBiblioteca
     UpdateObject = qryUpdateEmprestimo
-    Active = True
     SQL.Strings = (
       'select * from emprestimo'
     )
