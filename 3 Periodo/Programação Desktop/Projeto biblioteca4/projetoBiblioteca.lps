@@ -10,7 +10,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="6"/>
         <CursorPos X="71"/>
-        <UsageCount Value="166"/>
+        <UsageCount Value="168"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -22,7 +22,7 @@
         <UnitName Value="unitDataModule"/>
         <TopLine Value="55"/>
         <CursorPos X="3" Y="75"/>
-        <UsageCount Value="166"/>
+        <UsageCount Value="168"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -34,7 +34,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="91"/>
         <CursorPos X="35" Y="118"/>
-        <UsageCount Value="166"/>
+        <UsageCount Value="168"/>
       </Unit>
       <Unit>
         <Filename Value="untfrmautor.pas"/>
@@ -46,7 +46,7 @@
         <EditorIndex Value="5"/>
         <TopLine Value="24"/>
         <CursorPos X="12" Y="53"/>
-        <UsageCount Value="166"/>
+        <UsageCount Value="168"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -59,7 +59,7 @@
         <EditorIndex Value="2"/>
         <TopLine Value="85"/>
         <CursorPos X="3" Y="87"/>
-        <UsageCount Value="165"/>
+        <UsageCount Value="167"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -71,7 +71,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="10"/>
         <CursorPos X="9" Y="39"/>
-        <UsageCount Value="154"/>
+        <UsageCount Value="156"/>
       </Unit>
       <Unit>
         <Filename Value="untfrmassunto.pas"/>
@@ -82,7 +82,7 @@
         <EditorIndex Value="4"/>
         <TopLine Value="12"/>
         <CursorPos X="3" Y="46"/>
-        <UsageCount Value="152"/>
+        <UsageCount Value="154"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -94,7 +94,7 @@
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="3"/>
         <CursorPos X="31" Y="4"/>
-        <UsageCount Value="151"/>
+        <UsageCount Value="153"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -105,9 +105,9 @@
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="132"/>
-        <CursorPos X="5" Y="157"/>
-        <UsageCount Value="136"/>
+        <TopLine Value="128"/>
+        <CursorPos X="74" Y="154"/>
+        <UsageCount Value="138"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -273,8 +273,6 @@
       <List Name="LaunchingApplication" Type="File" Count="1">
         <Item1 Value="C:\WINDOWS\system32\cmd.exe /C ${TargetCmdLine}"/>
       </List>
-      <List Name="WorkingDirectory" Type="File" Count="1"/>
-      <List Name="CommandLineParameters" Count="1"/>
     </HistoryLists>
   </ProjectSession>
 </CONFIG>

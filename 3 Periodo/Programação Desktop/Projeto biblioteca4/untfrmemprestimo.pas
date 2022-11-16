@@ -126,32 +126,32 @@ begin
   with qryEmprestimoObra.SQL do
   begin
     Clear;
-    add('select obra.*, exemplar.exe_numero, exemplar.data_compra, exemplar.situacao');
-    add('from obra, exemplar');
+    add('select obra.*, exemplar.exe_numero, exemplar.data_compra, exemplar.situacao ');
+    add('from obra, exemplar ');
   end;
 
   if trim(editCodigoObra.Text) <> '' then
   begin
-    qryEmprestimoObra.SQL.Add('where obra.obr_codigo = :codigoParametro and');
+    qryEmprestimoObra.SQL.Add('where obra.obr_codigo = :codigoParametro and ');
     qryEmprestimoObra.ParamByName('codigoParametro').AsString :=
       trim(editCodigoObra.Text);
   end;
 
   if trim(editTituloObra.Text) <> '' then
   begin
-    qryEmprestimoObra.SQL.Add('where obra.titulo like :tituloParametro and');
+    qryEmprestimoObra.SQL.Add('where obra.titulo like :tituloParametro and ');
     qryEmprestimoObra.ParamByName('tituloParametro').AsString :=
       '%' + trim(editTituloObra.Text) + '%';
   end;
 
   if trim(editTipoObra.Text) <> '' then
   begin
-    qryEmprestimoObra.SQL.Add('where obra.tipo_obra like :tipoParametro and');
+    qryEmprestimoObra.SQL.Add('where obra.tipo_obra like :tipoParametro and ');
     qryEmprestimoObra.ParamByName('tipoParametro').AsString :=
       trim(editTipoObra.Text);
   end;
 
-  qryEmprestimoObra.SQL.Add('where obra.obr_codigo = exemplar.obr_codigo');
+  qryEmprestimoObra.SQL.Add('where obra.obr_codigo = exemplar.obr_codigo ');
 
   qryEmprestimoObra.Open;
 end;

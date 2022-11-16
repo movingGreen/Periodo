@@ -1,7 +1,7 @@
 object frmEmprestimo: TfrmEmprestimo
-  Left = 655
+  Left = 291
   Height = 704
-  Top = 6
+  Top = 4
   Width = 894
   Caption = 'frmEmprestimo'
   ClientHeight = 704
