@@ -1,0 +1,59 @@
+INSERT into ESPECIALIDADE_MEDICO 
+	(Cod_Medico, Cod_Especialidade, DT_Inicio_Especialidade)
+VALUES
+	(1, 1, '1996/12/02'),
+	(2, 3, '2000/11/01'),
+	(3, 2, '2000/05/04'),
+	(1, 3, '1995/03/22'),
+	(2, 2, '1998/07/30'),
+	(3, 1, '2006/04/13');
+
+
+
+INSERT into MEDICO 
+	(Cod_Endereco, Nome, CRM, Celular, Salario)
+VALUES
+	(1, 'AUGUSTO JOSÉ', '931527586845', '6594520-3212', 10000),
+	(2, 'CARLOS HENRIQUE', '474718879694', '6593515-1545', 15000),
+	(3, 'RODRIGO SILVA', '224175670532', '6597582-7845', 17000);
+
+
+INSERT into ENDERECO 
+	(Cod_Bairro, Cod_Rua, Cod_Cidade, CEP)
+VALUES
+	(1, 1, 1, '78000300'),
+	(2, 2, 2, '78000400'),
+	(3, 3, 3, '78000500');
+
+
+INSERT into RUA 
+	(Descricao)
+VALUES
+	('Coronel Escolástico'),
+	('Candido Mariano'),
+	('Barão de Melgaço');
+
+
+INSERT into BAIRRO 
+	(Descricao)
+VALUES
+	('Centro'),
+	('Bairro 1'),
+	('Bairro 2');
+
+
+INSERT into CIDADE 
+	(UF, Descricao)
+VALUES
+	('MT', 'CUIABÁ'),
+	('MT', 'HOMEOPATIA'),
+	('MT', 'SORRISO');
+
+
+INSERT into ESPECIALIDADE 
+	(nome)
+VALUES
+	('ORTOPEDIA'),
+	('HOMEOPATIA'),
+	('DERMATOLOGIA');
+
