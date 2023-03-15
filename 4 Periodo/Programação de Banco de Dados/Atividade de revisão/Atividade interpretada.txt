@@ -1,0 +1,21 @@
+II - REALIZANDO AS CONSULTAS
+a) Mostre o Nome, o CRM dos m&cos, bem o nome de suas especialidades. A consulta
+deve ser ordenada pelo nome do médico, por sua
+b) Mostre o nome da Rua, Bairro, Cidade, UF e CEP. A consulta deve ser ordenada pelo atributo
+nome rua;
+c) Mostre o Nome dos rrEcos que moram na rua 'CORONEL ESCOLÁSTICO':
+d) Mostre o Celular dos médicos cujo CEP é
+e) Mostre o salário médio dos médicos;
+f) Mostre o Wne da Rua, Bairro e Cidade dos médicos cuja especialidade é 'HOMEOPATIA';
+g) %stre o Nome e o Salário dos médicos que tem a mesma do rnédico
+'AUGUSTO JOSÉ';
+h) Mostre o salário de os médicos que moram na cidade de 'POCONÉ';
+i) Mostre o Nome e o Email dos médicos cuja especialidade é 'ORTOPEDIA';
+) Mostre o Nome do Bairro e o Telefone dos médicos cuja especialidade é 'DERbAATOLOGIA'•,
+) Dado a existência do Bairro 'CENTRO', na Cidade de 'CUIABA', crie a Rua 'BARAO DE
+MELGAÇO' e um código de para esta Rua, com o CEP igual a
+I) Atualize o código de logradouro de todos os médicos cuja Rua for 'CANDIDO MARIANO, Bairro
+'CENTRO', Cidade 'CUIABR, para o de logradouro criado no 'item h'.
+m) Apague os seguintes em suas tabelas:
+Cidade 'CUIABA', Bairro 'CENTRO', Rua 'CANDIDO MARIANO';
+Rua: Desc_Rua 'CANDIDO MARIANO'.
