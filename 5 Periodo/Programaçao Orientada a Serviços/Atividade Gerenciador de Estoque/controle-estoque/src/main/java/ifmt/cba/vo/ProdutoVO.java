@@ -4,6 +4,15 @@ public class ProdutoVO {
   private int codigo;
   private String nome;
   private int estoque;
+  private float valorUnitario;
+
+  public float getValorUnitario() {
+    return valorUnitario;
+  }
+
+  public void setValorUnitario(float valorUnitario) {
+    this.valorUnitario = valorUnitario;
+  }
 
   public ProdutoVO() {
     this.estoque = 0;

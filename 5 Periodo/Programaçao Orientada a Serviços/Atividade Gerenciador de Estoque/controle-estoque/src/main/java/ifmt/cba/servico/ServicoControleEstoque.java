@@ -35,4 +35,10 @@ public interface ServicoControleEstoque {
 
   @WebMethod()
   public int totalEstoqueFisico();
+
+  @WebMethod()
+  public float totalizarValorEstoqueProduto(ProdutoVO produtoVO);
+
+  @WebMethod()
+  public float totalizarValorEstoqueGeral();
 }

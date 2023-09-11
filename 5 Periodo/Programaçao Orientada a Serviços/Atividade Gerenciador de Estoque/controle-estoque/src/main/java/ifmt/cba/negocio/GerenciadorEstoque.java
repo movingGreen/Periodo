@@ -90,4 +90,20 @@ public class GerenciadorEstoque {
     }
     return total;
   }
+
+  public float totalizarValorEstoqueProduto(ProdutoVO produtoVO) {
+    float total = 0;
+    total = produtoVO.getEstoque() * produtoVO.getValorUnitario();
+    return total;
+  }
+
+  public float totalizarValorEstoqueGeral() {
+    float total = 0;
+
+    for (ProdutoVO produtoVO : this.listaProduto) {
+      total = produtoVO.getEstoque() * produtoVO.getValorUnitario();
+    }
+
+    return total;
+  }
 }

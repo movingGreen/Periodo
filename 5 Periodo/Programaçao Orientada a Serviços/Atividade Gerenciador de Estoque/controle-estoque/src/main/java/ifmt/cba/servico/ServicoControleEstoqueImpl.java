@@ -6,7 +6,7 @@ import ifmt.cba.negocio.GerenciadorEstoque;
 import ifmt.cba.vo.ProdutoVO;
 import jakarta.jws.WebService;
 
-@WebService(endpointInterface = "ifmt.cbs.servico.ServicoControleEstoque")
+@WebService(endpointInterface = "ifmt.cba.servico.ServicoControleEstoque")
 public class ServicoControleEstoqueImpl implements ServicoControleEstoque {
 
   private GerenciadorEstoque gerenciadorEstoque;
@@ -53,5 +53,15 @@ public class ServicoControleEstoqueImpl implements ServicoControleEstoque {
   @Override
   public int totalEstoqueFisico() {
     return this.gerenciadorEstoque.totalEstoqueFisico();
+  }
+
+  @Override
+  public float totalizarValorEstoqueProduto(ProdutoVO produtoVO) {
+    return this.gerenciadorEstoque.totalizarValorEstoqueProduto(produtoVO);
+  }
+
+  @Override
+  public float totalizarValorEstoqueGeral() {
+    return this.gerenciadorEstoque.totalizarValorEstoqueGeral();
   }
 }

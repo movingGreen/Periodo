@@ -1,13 +1,12 @@
 package ifmt.cba;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+import ifmt.cba.servico.ServicoControleEstoqueImpl;
+import jakarta.xml.ws.Endpoint;
+
+public class App {
+    public static void main(String[] args) {
+        ServicoControleEstoqueImpl controleEstoqueImpl = new ServicoControleEstoqueImpl();
+        Endpoint.publish("http://localhost:8083/servico/estoque", controleEstoqueImpl);
+        System.out.println("serviço publicado com sucesso");
     }
 }
