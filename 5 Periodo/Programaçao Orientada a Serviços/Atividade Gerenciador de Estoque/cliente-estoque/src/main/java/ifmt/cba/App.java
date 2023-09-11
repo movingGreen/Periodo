@@ -72,15 +72,20 @@ public class App {
         ProdutoVO produtoVOTemp = null;
         int codigo;
         String nome;
+        float valorUnitario;
         boolean sair = false;
 
         do {
             try {
                 codigo = Integer.parseInt(JOptionPane.showInputDialog(null, "Forneca o codigo do produto"));
                 nome = JOptionPane.showInputDialog(null, "Forneca o nome do produto");
+                valorUnitario = Float
+                        .parseFloat(JOptionPane.showInputDialog(null, "Forneca o valor unitario do produto"));
+
                 produtoVOTemp = new ProdutoVO();
                 produtoVOTemp.setCodigo(codigo);
                 produtoVOTemp.setNome(nome);
+                produtoVOTemp.setValorUnitario(valorUnitario);
                 controleEstoque.adicionarProduto(produtoVOTemp);
                 sair = true;
             } catch (Exception ex) {
@@ -201,10 +206,18 @@ public class App {
             System.out.println("Codigo: " + produtoTemp.getCodigo());
             System.out.println("Nome: " + produtoTemp.getNome());
             System.out.println("Estoque: " + produtoTemp.getEstoque());
+            System.out.println("Valor unitario: " + produtoTemp.getValorUnitario());
         }
     }
 
     private static void contarValorTotalEstoque() {
-        return;
+        List<ProdutoVO> listaProduto = controleEstoque.listaProduto();
+        float total = 0;
+        for (ProdutoVO produtoTemp : listaProduto) {
+            total += produtoTemp.getEstoque() * produtoTemp.getValorUnitario();
+        }
+
+        System.out.println("______________________________");
+        System.out.println("Valor total : " + total);
     }
 }
