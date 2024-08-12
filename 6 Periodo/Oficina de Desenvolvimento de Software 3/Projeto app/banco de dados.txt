@@ -1,0 +1,18 @@
+CREATE TABLE pessoa (
+id_pessoa serial PRIMARY KEY,
+cpf char(11),
+nome varchar(200),
+dt_nascimento date,
+telefone varchar(60),
+id_lotacao serial,
+FOREIGN KEY(id_lotacao) REFERENCES lotacao (id_lotacao)
+
+
+);
+
+CREATE TABLE lotacao (
+id_lotacao serial PRIMARY KEY,
+departamento varchar(200)
+);
+
+

@@ -1,0 +1,22 @@
+-- Inserir 200 registros na tabela 'pessoa'
+INSERT INTO pessoa (nome, cpf, telefone, dt_nascimento, id_lotacao)
+SELECT
+    CONCAT('Nome', FLOOR(1 + (RANDOM() * 200))),
+    LPAD(FLOOR(100000000 + (RANDOM() * 900000000))::TEXT, 11, '0'),
+    '(11) 9' || LPAD(FLOOR(10000000 + (RANDOM() * 90000000))::TEXT, 8, '0'),
+    CURRENT_DATE - INTERVAL '1 day' * FLOOR(RANDOM() * 3650 + 6570),  -- Data de nascimento entre 18 e 28 anos
+    FLOOR(1 + (RANDOM() * 10))
+FROM
+    generate_series(1, 200) AS s(i);
+
+
+
+
+
+
+
+
+
+
+
+
